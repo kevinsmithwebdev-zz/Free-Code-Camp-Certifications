@@ -1,0 +1,11 @@
+position delete buttons vertically or extend to fill div
+
+ClickHandlerClient - handlePollDelete()
+  is location.reload() the best way?
+
+poll-show.hbs
+  is <script src="../../js/scripts.js"></script> best path?
+
+copy to clipboard button look?
+
+sort on view all polls?

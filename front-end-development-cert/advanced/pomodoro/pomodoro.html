@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>Kevin's Pomodoro</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Average" rel="stylesheet">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/0.9.0/progressbar.min.js"></script>
+
+  <link rel="stylesheet" href="css/main.css"/>
+  <script src="js/main.js"></script>
+
+
+
+</head>
+
+<body>
+  <div class = 'container-fluid' id = 'full'>
+    <div id = 'title-area'>Kevin's Pomodoro</div>
+		<div id = 'progress'>
+
+			<div id = 'input-area'>
+				<p class = 'container'>
+					<label for="pomodoro-spinner my-input">Pomodoro:</label>
+					<input id="pomodoro-spinner" name="value">
+				</p>
+				<p class = 'container'>
+					<label for="break-spinner my-input">Break:</label>
+					<input id="break-spinner" name="value">
+				</p>
+				<fieldset id = 'time-radio my-input'>
+					<div class = 'container'>
+						<label for="radio-1">minutes</label>
+						<input type="radio" name="radio-1" value="60" checked>
+						<label for="radio-2">seconds</label>
+						<input type="radio" name="radio-1" value="1">
+					</div>
+				</fieldset>
+			</div>
+
+			<div class = 'container' id = 'timer-area'>
+				<div id = 'time'><!-- countdown timer --></div>
+				<button class='btn' id = 'btn-start' value='start'>start</button>
+				<div id = 'message-area'>Press start when you're ready to get some work done.</div>
+			</div>
+		</div> <!-- progress -->
+		<div class = 'container' id = 'footnote'>OK, the second option isn't typically useful on a Pomodoro, but they make it easier for my friends to test it.
+		</div>
+  </div> <!-- full container -->
+</body>
+</html>

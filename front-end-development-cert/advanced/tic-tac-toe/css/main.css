@@ -1,0 +1,102 @@
+.centered {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+	  text-align: center;
+}
+
+body {
+	background-color: #F0F8FF;
+}
+
+.full {
+	height: 900px;
+	width: 650px;
+	background-color: #FFE4B5;
+	border-radius: 5px;
+
+}
+
+#title-area {
+	font-family: 'Bubblegum Sans', cursive;
+	font-weight: bold;
+	font-size: 64px;
+
+}
+
+#prompt {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	font-size: 48px;
+	height: 100px;
+	width: 600px;
+}
+
+#board {
+	height: 600px;
+	width: 600px;
+	visibility: hidden;
+}
+
+
+
+.TTT {
+	height: 180px;
+	width: 180px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 160px;
+}
+
+.TTT-left {
+	border-left: 10px solid green;
+	margin-left: -5px;
+}
+
+.TTT-right {
+	border-right: 10px solid green;
+	margin-right: -5px;
+}
+
+.TTT-top {
+	border-top: 10px solid green;
+	margin-top: -3px;
+}
+
+.TTT-bottom {
+	border-bottom: 10px solid green;
+	margin-bottom: -4px;
+}
+
+#prompt {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.btn {
+	height: 40px;
+	width: 90px;
+	font-size: 100%;
+	font-weight: bold;
+	border-radius: 5px;
+	background-color: #4169E1;
+	color: white;
+}
+
+.btn:hover {
+	background-color: #3159D1;
+}
+
+.reset-btn {
+	height: 40px;
+	width: 120px;
+	font-size: 100%;
+	font-weight: bold;
+	border-radius: 5px;
+	margin-left: 10px;
+	background-color: red;
+	color: white;
+}
+.reset-btn:hover {
+	color: pink;
+}

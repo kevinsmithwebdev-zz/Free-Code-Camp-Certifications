@@ -1,0 +1,25 @@
+.pagination {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+
+.pagination-btn {
+  margin: 2px;
+  border: 1px #ccc solid;
+  border-radius: 2px;
+  background-color: #222;
+  color: #aaa
+}
+
+.pagination-btn-enabled:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+.pagination-display {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 22px;
+}

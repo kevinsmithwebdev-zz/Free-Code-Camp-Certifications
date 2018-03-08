@@ -1,0 +1,176 @@
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+.opacity-2 {
+  opacity: 0.4;
+}
+
+body {
+  width: 100%;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.header {
+  background-color: #CCF;
+  border-radius: 4px;
+}
+
+.stats-title {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.stats-data {
+  font-size: 22px;
+  text-align: left;
+}
+
+.stats-messages {
+  font-size: 22px;
+  background-color: #999999;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.white-msg {
+  color: white;
+}
+
+.player-msg {
+  color: blue;
+}
+
+.monsters-msg {
+  color: #dd0000;
+}
+
+.health-msg {
+  color: #006f00;
+}
+
+.weapons-msg {
+  color: #ffa511;
+}
+
+.boss-msg {
+  color: red;
+}
+
+.over-title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.over-body {
+  font-size: 28px;
+  text-align: center;
+}
+
+.rules {
+  font-size: 19px;
+  text-align: left;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.btn-default {
+  color: #333333;
+  background-color: #333333;
+  border-color: #cccccc;
+}
+
+.lights-on {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.lights-off {
+  background-color: black;
+  color: white !important;
+  font-weight: bold;
+  border: 2px solid black;
+}
+
+.controls-box {
+  width: 1628px;
+  height: 150px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  right: 23%;
+  border-radius: 5px 5px 0 0;
+}
+
+.stats-row {
+  width: 1628px;
+}
+
+.center {
+  text-align: center;
+}
+
+.cell {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  position: relative;
+}
+
+.dungeon {
+  line-height: 0;
+  border: 10px solid #444;
+  color: white;
+  background-color: #333;
+  border-radius: 0 0 5px 5px;
+  width: 1628px;
+  height: 834px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  right: 23%;
+}
+
+.cell-0 {
+  background-color: black;
+}
+
+.cell-1 {
+  background-color: #EEE;
+  border: 1px solid #dddddd;
+}
+
+.cell-2 {
+  background-color: blue;
+}
+
+.cell-3 {
+  background-color: red;
+}
+
+.cell-4 {
+  background-color: green;
+}
+
+.cell-5 {
+  background-color: #ee9400;
+}
+
+.cell-6 {
+  background-color: red;
+}

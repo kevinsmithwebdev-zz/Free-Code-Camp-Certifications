@@ -1,0 +1,16 @@
+{
+  "name": "sizer",
+  "version": "1.0.0",
+  "description": "File Metadata Microservice for fCC",
+  "main": "sizer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node sizer.js"
+  },
+  "author": "Kevin Smith",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "multer": "^1.3.0"
+  }
+}

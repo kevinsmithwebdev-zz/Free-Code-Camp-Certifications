@@ -1,0 +1,60 @@
+<html>
+<head>
+  <title>Kevin's Image Sharing App for FCC</title>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script src="/js/common.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          {{#if user}}
+            <li role="presentation"><a href="/logout">Logout</a></li>
+          {{else}}
+            <li role="presentation"><a href="/login/twitter">Login</a></li>
+          {{/if}}
+        </ul>
+      </nav>
+      <h3>Image Sharer App
+        {{#if user}}
+          <i> - {{user.displayName}}</i>
+        {{else}}
+          <i> - view-only until logged in</i>
+        {{/if}}
+      </h3>
+    </div> <!-- header -->
+  </div> <!-- container -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {{#if success_msg}}
+          <div class="alert alert-success">{{success_msg}}</div>
+        {{/if}}
+        {{#if error_msg}}
+          <div class="alert alert-danger">{{error_msg}}</div>
+        {{/if}}
+        {{#if error}}
+          <div class="alert alert-danger">{{error}}</div>
+        {{/if}}
+
+        {{{body}}}
+
+      </div> <!-- col-12 -->
+    </div> <!-- row -->
+  </div> <!-- container -->
+
+  <footer class="footer">
+    <p>&copy; 2017 Kevin Smith - Made for <a href="https://www.freecodecamp.org">Free Code Camp</a>'s Backend Certificate</p>
+  </footer>
+
+</body>
+</html>

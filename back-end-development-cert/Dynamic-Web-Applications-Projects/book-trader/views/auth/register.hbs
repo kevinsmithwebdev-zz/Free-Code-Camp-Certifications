@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/styles.css" />
+
+<h2 class="page-header">Register</h2>
+
+{{#if errors}}
+  {{#each errors}}
+    <div class="alert alert-danger">{{msg}}</div>
+  {{/each}}
+{{/if}}
+
+<form action="/users/register" method="post">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-xs-6">
+
+        <div class="form-group">
+          <label>Display Name</label>
+          <input type="text" class="form-control" placeholder="name" name="name" minlength="4" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label>Username</label>
+          <input type="text" class="form-control" placeholder="username" name="username" minlength="4" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="password" name="password" minlength="4" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" class="form-control" placeholder="password" name="password2" minlength="4" maxlength="30" required>
+        </div>
+      </div> <!-- col-md-6 -->
+
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label>City</label>
+          <input type="text" class="form-control" placeholder="city" name="city" minlength="4" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label>State</label>
+          <input type="text" class="form-control" placeholder="state" name="state" minlength="2" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label>Country</label>
+          <input type="text" class="form-control" placeholder="country" name="country" minlength="2" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" placeholder="email" name="email" minlength="4" maxlength="30" required>
+        </div>
+
+      </div> <!-- col-md-6 -->
+    </div>  <!-- row -->
+
+  </div> <!-- container -->
+
+  <div class='center'>
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-warning">Reset</button>
+    <a class="btn btn-danger" href="/">Cancel</a>
+  </div>
+</form>

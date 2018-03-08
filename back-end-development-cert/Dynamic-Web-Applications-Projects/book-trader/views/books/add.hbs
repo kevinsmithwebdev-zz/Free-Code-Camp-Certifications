@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/css/book-add.css" />
+
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/book-add.js"></script>
+
+
+<h3>Add a Book</h3>
+
+{{#if errors}}
+  {{#each errors}}
+    <div class="alert alert-danger">{{msg}}</div>
+  {{/each}}
+{{/if}}
+
+<div class="input-group">
+  <span class="input-group-btn">
+    <button id='book-search-btn' class="btn btn-default" type="button"><i class="glyphicon glyphicon-search"></i></button>
+  </span>
+  <input id='book-search-box' type="text" class="form-control" placeholder="search by title, author, or ISBN...">
+</div>
+<br>
+<div id='books-list-box' class="container">
+
+</div>

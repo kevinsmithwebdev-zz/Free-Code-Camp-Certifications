@@ -1,0 +1,75 @@
+body {
+	background: url('http://wallpoper.com/images/00/37/45/85/circuit-have_00374585.png') no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 100%;
+
+}
+
+#title-area {
+	font-size: 52px;
+	font-family: 'Baloo Bhaina', cursive;
+}
+
+.complete {
+	width: 700px;
+	height: 700px;
+	margin-top: 100px;
+	padding 0px;
+	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+	color: 	#FF8330;
+}
+
+.cell {
+	height: 200px;
+	width: 200px;
+	border-radius: 50px;
+}
+
+.center-row {
+	font-family: 'Roboto', sans-serif;
+	height: 200px;
+	width: 600px;
+}
+
+.centered {
+    margin: auto;
+    width: 80%;
+		text-align: center;
+}
+
+.my-button {
+	font-size: 28px;
+	font-family: inherit;
+	font-weight: bold;
+	border-radius: 10px !important;
+}
+
+#startBtn {
+	font-size: 42px;
+	padding: 5px;
+	background-color: green;
+	color: white;
+	border: 0px;
+}
+
+.my-container {
+	width: 600px;
+}
+
+p {
+	font-size: 28px;
+}
+
+#strictBtn {
+	color: white;
+	background-color: #CF5300;
+	border: 0px;
+}
+
+.ui-corner-all {
+    border-radius: 10px;
+}

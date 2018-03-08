@@ -1,0 +1,26 @@
+
+svg {
+     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url(http://www.lesliewong.us/images/1307/alpe_l.jpg);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 10px;
+
+}
+
+.axis text {
+  font: 16px; 
+  font-family: sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #888;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+.center {
+  text-align: center;
+}

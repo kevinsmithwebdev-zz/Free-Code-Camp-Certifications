@@ -1,0 +1,538 @@
+
+const ButtonGroup = ReactBootstrap.ButtonGroup;
+const DropdownButton = ReactBootstrap.DropdownButton;
+const MenuItem = ReactBootstrap.MenuItem;
+const Grid = ReactBootstrap.Grid;
+const Row = ReactBootstrap.Row;
+const Col = ReactBootstrap.Col;
+const Button = ReactBootstrap.Button;
+const Modal = ReactBootstrap.Modal;
+
+const DUNGEON_GRID = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,1,0,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,1,0,1,1,1,1,0,1,0,0,0,0,1,0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,1,1,1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,1,1,1,0,0,1,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,0,0,1,1,1,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,1,1,1,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,0,1,0,0,1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,0,1,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,1,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,1,0,0,1,1,1,1,1,0,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,1,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,0,0,1,1,1,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,0,0,1,1,1,0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,1,1,1,0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,0,1,1,1,0,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,0,0,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,0,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1,1,1,1,1,1,1,0,1,1,0,1,0,0,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,0,0,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,1,0,1,0,0,0,0,0,1,1,1,1,1,1,1,0,0,1,0,0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,1,0,0,1,0,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,0,1,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,0,0,1,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+const S_CODE = 0; // code for a stone segment, dungeon wall
+const F_CODE = 1; // code for a floor segment - open, empty dungeon
+const P_CODE = 2; // code for player
+const M_CODE = 3; // code for a monster
+const H_CODE = 4; // code for health
+const W_CODE = 5; // code for a weapon
+const B_CODE = 6; // code for the boss
+
+//****************************************************************/
+class Controls extends React.Component {
+  
+  render() {
+    return (
+      <div className="controls-box">
+        <Grid fluid={true}>
+          <Row className="show-grid">
+            <Col md={4}><Button bsSize="large" id="wimp-mode" bsStyle="danger" onClick={this.onReset.bind(this)}>Reset</Button></Col>
+            <Col md={4} className="stats-title">Information/Controls</Col>
+            <Col md={4}><Button bsSize="large" className={"lights-" + ((this.props.isWimpMode)?"off":"on")} id="wimp-mode" bsStyle="inverse" onClick={this.onWimpModeToggle.bind(this)}>Turn {(this.props.isWimpMode)?"off":"on"} the Lights</Button></Col>
+          </Row>
+          <Row className="show-grid stats-row">
+            <Col md={3} className="stats-data">
+              <strong>Health:</strong> {this.props.player.health}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <strong>Level:</strong> {this.props.player.level}<br/>
+              <strong>Weapon:</strong> {this.props.player.weapon.name}<br/>
+              <strong>Attack:</strong> {this.props.player.weapon.attack} &#215; {1+(this.props.player.level-1)*0.25} (level bonus)  
+            </Col>
+            <Col md={5} className="stats-messages">
+              {this.props.messages.map((msg) => { return (<div className={msg.code + "-msg"}>{msg.str}</div>) })}
+            </Col>
+            <Col md={4} className="rules">
+              <span className="player-msg bold">You</span> must collect <span className="health-msg bold">health</span> and <span className="weapons-msg bold">weapons</span> to fight <span className="monsters-msg bold">monsters</span> before you take on the big guy, the <span className="monsters-msg bold">Boss!</span> Each kill raises your health and level (and attack bonus). Good luck!
+            </Col>
+          </Row>
+        </Grid>
+      </div>
+    );
+
+  }
+  
+  onWimpModeToggle(event) {
+    this.props.handleToggleWimpMode();
+  }
+  onReset(event) {
+    this.props.handleReset();
+  }
+}
+//****************************************************************/
+class Cell extends React.Component {
+  render() {
+    // console.log("cell id = " + this.props.id + " and class ='cell cell-" + this.props.status + "'");
+    return (
+      <span className={"cell opacity-" + (this.props.isWimpMode?1:this.props.opacity) + " cell-" + this.props.status} ></span>
+    )
+  }
+  // onCellClick(id) {
+  //   console.log("clicked = " + id); //onClick={this.onCellClick.bind(this, this.props.id)}
+  // }
+}
+//****************************************************************/
+class Dungeon extends React.Component {
+  render() {
+    var dungeonArr = [];
+    for (let i = 0; i < this.props.size.numCols; i++) {
+      for (let j = 0; j < this.props.size.numRows; j++) {
+        let id = j + i*this.props.size.numRows;
+        dungeonArr.push(<Cell id={id} status={this.props.map[id]} opacity={this.props.opacity[id]} isWimpMode={this.props.isWimpMode}/>);
+      }
+    }
+    return (
+      <div className="dungeon">
+        {dungeonArr}
+      </div>
+    );
+  }
+}
+
+//****************************************************************/
+
+class OverModal extends React.Component {
+  
+  winOrLoose() {
+    if (this.props.player.health<=0)
+      return "You loose! Sorry! Try your luck Again!";
+    else
+      return "You win! Double or nothing?";
+  }
+  
+  render() {
+    return (
+      <Modal show={this.props.isOver}>
+        <Modal.Header>
+          <Modal.Title className="over-title">Game over, man!</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body className="over-body">
+          {this.winOrLoose()}
+        </Modal.Body>        
+
+        <Modal.Footer>
+          <Button bsStyle="danger" onClick={this.onRestart.bind(this)}>Reset</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+  onRestart(event) {
+    this.props.handleReset();
+  }
+}
+
+//****************************************************************/
+
+
+class Game extends React.Component {
+  constructor() {
+    super();
+    // console.log("Game.constructor");
+    this.state = {
+      map: [],
+      size: { numRows: 50, numCols: 100 },
+      player: { location: 0, health: 0, weapon: { name: "", attack: 0 }, level: 1 },
+      messages: [],
+      isWimpMode: false,
+      isOver: false,
+      monsters: [],
+      health: [],
+      weapons: [],
+      boss: []
+    }
+    // console.log("here?!?");
+    this.state.size.numCells = this.state.size.numCols * this.state.size.numRows;
+    this.state.map = new Array(this.state.size.numCells).fill(0);
+    this.state.opacity = new Array(this.state.size.numCells).fill(0);
+  }  
+  componentDidMount() {
+    // console.log("Game.componentWillMount...");
+    // console.log(this);
+    this.setInitialState();
+  }
+  
+  
+  
+  //*********************************/
+  //*********************************/  
+  //*********************************/
+  
+  
+  setInitialState() {
+    // console.log("Game.setInitialState");
+    // console.log(this);
+    let newState = this.state;
+
+    newState.map = DUNGEON_GRID.slice();
+    newState.opacity.fill(0);
+    
+    newState.player = {
+        location: 2244,
+        health: 100,
+        weapon: { name: "rolled up newspaper", attack: 100 },
+        level: 1  
+      };
+    newState.messages = [
+        { str: "Welcome to the dungeon!", code: "white" },
+        { str: "But never forget...", code: "white" },
+        { str: "Lasciate ogne speranza, voi ch'intrate!", code: "white" }
+      ];
+    newState.isWimpMode = false;
+    newState.isOver = false;
+    newState.monsters = [
+        { name: "ogre", location: -1, health: 50, attack: 50 },
+        { name: "ogre", location: -1, health: 50, attack: 50 },
+        { name: "attack poodle", location: -1, health: 20, attack: 20 },
+        { name: "troll", location: -1, health: 70, attack: 70 },
+        { name: "troll", location: -1, health: 70, attack: 70 } 
+      ];
+    newState.health = [
+        { location: -1, health: 70 },
+        { location: -1, health: 100 },
+        { location: -1, health: 80 },
+        { location: -1, health: 50 },
+        { location: -1, health: 100 }
+      ];
+    newState.weapons = [
+        { name: "Louisville Slugger", location: -1, attack: 20 },
+        { name: "hatchet", location: -1, attack: 40 },
+        { name: "short sword", location: -1, attack: 60 },
+        { name: "bastard sword", location: -1, attack: 80 },
+        { name: "battle axe", location: -1, attack: 100 } 
+      ];
+    newState.boss = [{
+        location: -1, attack: 200, health: 300 
+      }];
+     
+    placeInDungeon.call(this, this.state.monsters, "monsters", M_CODE);
+    placeInDungeon.call(this, this.state.health, "health", H_CODE);
+    placeInDungeon.call(this, this.state.weapons, "weapons", W_CODE);
+    placeInDungeon.call(this, this.state.boss, "boss", B_CODE); 
+   
+    newState.map[newState.player.location] = P_CODE;
+   
+    this.changeOpacity(newState.player.location, 1);
+
+    this.setState(newState);
+    
+    /******************/
+    function placeInDungeon(itemArr, key, code) {
+      // console.log("here3");
+      // console.log(itemArr);
+      // console.log("key = " + key + " and code = " + code + " length = " + itemArr.length);
+      
+      for (var i = 0; i < itemArr.length; i++) {
+        // console.log("here3a - " + i);
+        let newLoc;
+        let row;
+        let col;
+        do {
+          // console.log("here4");
+          newLoc = this.randomInt(0, this.state.size.numCells-1);
+          row = this.getRowFromId(newLoc);
+          col = this.getColFromId(newLoc);
+          // console.log("checking - " + newLoc + "  row = " + row + "  col = " + col);
+        } while (!((this.state.map[newLoc]==F_CODE)&&
+            (this.state.map[this.getCoordFromId(row, col-1)]==F_CODE)&&
+            (this.state.map[this.getCoordFromId(row+1, col-1)]==F_CODE)&&
+            (this.state.map[this.getCoordFromId(row+1, col)]==F_CODE)&&
+            (this.state.map[this.getCoordFromId(row+1, col+1)]==F_CODE)&&
+            (this.state.map[this.getCoordFromId(row, col+1)]==F_CODE)&&
+            (this.state.map[this.getCoordFromId(row-1, col+1)]==F_CODE)&&
+            (this.state.map[this.getCoordFromId(row-1, col)]==F_CODE)&&
+            (this.state.map[this.getCoordFromId(row-1, col-1)]==F_CODE)));     
+          
+        // console.log("done, newLoc is " + newLoc);
+        this.state.map[newLoc] = code;
+        if (key=="boss") {
+          this.state.map[this.getCoordFromId(row, col+1)] = code;
+          this.state.map[this.getCoordFromId(row+1, col)] = code;
+          this.state.map[this.getCoordFromId(row+1, col+1)] = code;
+        }
+        this.state[key][i].location = newLoc;
+        // console.log("Setting monster " + i + " at " + newLoc);
+      }
+    }
+  }
+  
+  //*********************************/ 
+  //*********************************/
+  //*********************************/
+  
+  changeOpacity(loc, opLevel) {
+    
+    let row = this.getRowFromId(loc);
+    let col = this.getColFromId(loc);
+    let newOpacity = this.state.opacity;
+    let newLoc;
+    
+    for (let r = -3; r <= 3; r++) {
+      for (let c = -3; c <= 3; c++) {
+        if (Math.abs(r*c)!=9&&(row + r)>=0&&(row + r)<this.state.size.numRows&&(col + c)>=0&&(col + c)<this.state.size.numCols)
+          newOpacity[this.getCoordFromId(row + r, col + c)] = opLevel;
+      }
+    }
+    
+    this.setState({ opacity: newOpacity });    
+  }
+  
+  addMessage(str, code) {
+    let newMessages = this.state.messages;
+    newMessages.shift()
+    newMessages.push( { str: str, code: code });
+    this.setState( { messages: newMessages });
+  }
+  
+  randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  movePlayer(move) {
+    let newMap = this.state.map;
+    let newPlayer = this.state.player;
+    let newLoc;
+    
+    let curC = this.getColFromId(this.state.player.location);
+    let curR = this.getRowFromId(this.state.player.location);
+    let newC = curC;
+    let newR = curR;
+    
+    switch (move) {
+      case 37:
+        newC--;
+        break;
+      case 38:
+        newR--;
+        break;
+      case 39:   
+        newC++;
+        break;
+      case 40:   
+        newR++;
+        break;    
+    }
+
+    newLoc = this.getCoordFromId(newR, newC);
+    let newState;
+    let mDamage;
+    let pDamage;
+    
+    switch (this.state.map[newLoc]) {
+        
+      case S_CODE:
+        break;
+        
+      case F_CODE:
+        this.changeOpacity(this.state.player.location, 2);
+        this.changeOpacity(newLoc, 1);
+        newMap[newLoc]=P_CODE;
+        newMap[this.state.player.location]=F_CODE;
+        newPlayer.location = newLoc;
+        this.setState({ map: newMap, player: newPlayer });
+        
+        break;
+        
+      case M_CODE:
+        let monsterIndex = this.getIndexItem(newLoc, "monsters");
+        pDamage = Math.floor(this.state.player.weapon.attack * 
+              (1+(this.state.player.level-1)*0.25) * (this.randomInt(50, 110)/100));
+        mDamage = Math.floor(this.state.monsters[monsterIndex].attack * 
+              ((this.randomInt(50, 110)-this.state.player.level*5)/100));
+        this.addMessage("Attacking the " + this.state.monsters[monsterIndex].name + "! You did " + 
+                        pDamage + " damage and took " + mDamage + "!", "monsters");
+        newState = this.state;
+        newState.player.health -= mDamage;
+        newState.monsters[monsterIndex].health -= pDamage;
+        if (newState.player.health<=0) {
+          this.addMessage("Sorry dude, the " + this.state.monsters[monsterIndex].name + " killed you!", "player");
+        } else if (newState.monsters[monsterIndex].health<=0) {
+          this.addMessage("Huzzah! The " + this.state.monsters[monsterIndex].name + " is dead!", "player");
+          newState.map[newLoc]=P_CODE;
+          newState.map[this.state.player.location]=F_CODE;
+          this.changeOpacity(newState.player.location, 2);
+          this.changeOpacity(newLoc, 1);         
+          newState.player.location = newLoc;
+          newState.player.level++;
+        } else {
+          this.addMessage("No winner! " + this.state.monsters[monsterIndex].name + " has " + newState.monsters[monsterIndex].health + " health left.", "monsters");
+        }
+        this.setState(newState);
+        break;
+ 
+      case H_CODE:
+        newState = this.state;
+        let healthIndex = this.getIndexItem(newLoc, "health");
+        newState.player.health+=this.state.health[healthIndex].health;
+        this.addMessage("Health gained, +" + this.state.health[healthIndex].health + " points!", "health");
+        newState.health.splice(healthIndex, 1);
+        newState.map[newLoc]=P_CODE;
+        newState.map[this.state.player.location]=F_CODE;
+        this.changeOpacity(this.state.player.location, 2);
+        this.changeOpacity(newLoc, 1);
+        newState.player.location = newLoc;
+        this.setState(newState);
+        break;
+        
+     case W_CODE:
+        newState = this.state;
+        newState.player.weapon = this.state.weapons[0];
+        this.addMessage("Picked up " + newState.player.weapon.name + ", new attack is " + newState.player.weapon.attack +  " points!", "weapons");
+        newState.weapons.shift();
+        newState.map[newLoc]=P_CODE;
+        newState.map[this.state.player.location]=F_CODE;
+        this.changeOpacity(this.state.player.location, 2);
+        this.changeOpacity(newLoc, 1);
+        this.state.player.location = newLoc;
+        this.setState(newState);
+        break;
+        
+     case B_CODE:
+        pDamage = Math.floor(this.state.player.weapon.attack * 
+              (1+(this.state.player.level-1)*0.25) * (this.randomInt(50, 110)/100));
+        mDamage = Math.floor(this.state.boss[0].attack * 
+              ((this.randomInt(50, 110)-this.state.player.level*5)/100));
+        this.addMessage("Attacking the Boss! You did " + 
+                        pDamage + " damage and took " + mDamage + "!", "monsters");
+        newState = this.state;
+        newState.player.health -= mDamage;
+        newState.boss[0].health -= pDamage;
+
+        if (newState.player.health<=0) {
+          this.addMessage("Sorry Charlie, the Boss killed you!", "player");
+        } else if (newState.boss[0].health<=0) {
+          this.addMessage("Huzzah! The Boss is dead! You've won!", "player");
+          newState.map[newLoc]=P_CODE;
+          newState.map[this.state.player.location]=F_CODE;
+          newState.player.location = newLoc;
+          newState.player.level++;
+        } else {
+          this.addMessage("No winner! The Boss has " + newState.boss[0].health + " left!", "monsters");
+        }
+    }
+    
+    if (this.state.player.health<=0||this.state.boss[0].health<=0)
+      this.setState({ isOver: true });
+  }
+  
+  getIndexItem(loc, key) {
+    // console.log("loc=" + loc + "   key=" + key);
+    // console.log(this);
+    for (let i = 0; i < this.state[key].length; i++) {
+      // console.log("*** " + this.state[key][i].location);
+      if (this.state[key][i].location == loc) 
+        return i;
+    }
+    // should never get here
+  }
+  
+
+  getRowFromId(id) {
+    return Math.floor(id/this.state.size.numCols);
+  }
+  getColFromId(id) {
+    return id%this.state.size.numCols;
+  }
+  
+  getCoordFromId(row, col) {
+    if (col>=this.state.size.numCols)
+      col-=this.state.size.numCols;
+    else if (col<0) 
+      col+=this.state.size.numCols;
+    if (row>=this.state.size.numCols)
+      row-=this.state.size.numRows;
+    else if (row<0) 
+      row+=this.state.size.numRows;
+    return (row*this.state.size.numCols+col)%this.state.size.numCells;
+  }
+
+  handleToggleWimpMode() {
+    if (this.state.isWimpMode)
+      this.addMessage("Good, you're gonna play like an adult.", "player");
+    else
+      this.addMessage("Wimp! Afraid of the dark?", "player");
+    this.setState({ isWimpMode: !this.state.isWimpMode })
+  }
+  
+  handleReset() {
+    this.setInitialState();
+  }
+  
+  render() {
+    document.onkeydown = checkKey;
+    let that = this;
+    
+    function checkKey(e) {
+      e.preventDefault();
+      e = e || window.event;
+      let key;
+      switch (e.keyCode) {
+        case 65:
+        case 37:
+          key = 37;
+          break;
+        case 87:
+        case 38:
+          key = 38;
+          break;
+        case 68:
+        case 39:
+          key = 39;          
+          break;
+        case 83:
+        case 40:
+          key = 40; 
+          break;
+      }                 
+      if (key>=37&&key<=40)
+        that.movePlayer(key);
+    }
+    
+    return (
+      <div>
+        
+        <Controls player={this.state.player} messages={this.state.messages} isWimpMode={this.state.isWimpMode} 
+              handleToggleWimpMode={this.handleToggleWimpMode.bind(this)} handleReset={this.handleReset.bind(this)}/>
+        <Dungeon map={this.state.map} opacity={this.state.opacity} size={this.state.size} isWimpMode={this.state.isWimpMode} />
+        <OverModal player={this.state.player} isOver={this.state.isOver} handleReset={this.handleReset.bind(this)}/>
+      </div>
+    );
+  }
+}
+//****************************************************************/
+class Header extends React.Component {
+  render() {
+    // console.log("Header.render");
+    return (
+      <div className="header">
+        <h1 className="center">Kevin's Roguelike Dungeon Crawler Game</h1>
+      </div>
+    )
+  }
+}
+//****************************************************************/
+class Footer extends React.Component {
+  render() {
+    // console.log("Footer.render");
+    return (
+      <div className="center container">
+        <h4 className="center">Made for <a href="https://www.freecodecamp.com">Free Code Camp</a>'s Data Visualization Course</h4>
+      </div>
+    )
+  }
+}
+
+//****************************************************************/
+
+class App extends React.Component {
+  render() {
+    // console.log("App.render");
+    return (
+      <div className="container center">
+        <Header />
+        <Game />
+        <Footer />
+      </div>
+    );
+  } // render
+} // class App
+
+ReactDOM.render(<App />, document.getElementById("app"));

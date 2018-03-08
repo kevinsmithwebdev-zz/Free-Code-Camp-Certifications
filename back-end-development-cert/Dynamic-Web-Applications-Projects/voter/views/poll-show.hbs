@@ -1,0 +1,30 @@
+<script type="text/javascript" src="../../js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/zingchart.min.js"></script>
+<script type="text/javascript" src="/controllers/clickController.client.js"></script>
+<script type="text/javascript" src="../../js/scripts.js"></script>
+<script type="text/javascript" src="../../js/clipboard.min.js"></script>
+
+<h2 class="page-header">Poll: <b>{{poll.title}}</b> - <i>created by {{poll.creator}}</i></h3>
+<h3>Would you like to share this poll?</h3>
+<h5><span id="link-url">{{url}}</span> <button title="Copy to clipboard" class="btn glyphicon glyphicon-copy btn-lg copy-btn" aria-hidden="true" data-clipboard-target="#link-url"></button><h5>
+
+<br>
+
+{{#if isLoggedIn}}
+  {{#if @root.hasVoted}}
+    <h3>You have already voted on this poll. You can only vote once per poll.</h3>
+  {{else}}
+    <h3>You have not voted on this poll. Would you like to vote now?</h3>
+    {{#each @root.poll.choices}}
+      <button class="btn-primary vote-button" value="?creator={{@root.poll.creator}}&poll={{@root.poll.title}}&vote={{@index}}&username={{@root.user.username}}">{{this.name}}</button>
+    {{/each}}
+  {{/if}}
+{{else}}
+  <h3>You are not logged in. You must be logged in to vote.</h3>
+{{/if}}
+
+<div id="poll-chart"></div>
+
+<script type="text/javascript">
+  new Clipboard('.btn');
+</script>

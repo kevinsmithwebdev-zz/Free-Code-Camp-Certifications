@@ -1,0 +1,7 @@
+<script type="text/javascript" src="/controllers/clickController.client.js"></script>
+
+<h2 class="page-header">View All Polls</h2>
+
+{{#each results}}
+  <div><button class="btn-primary poll-button poll-button-link" type="button" name="button" value="?creator={{creator}}&poll={{title}}"><b>{{this.title}}</b> - <i>created by {{this.creator}}</i></button></div>
+{{/each}}

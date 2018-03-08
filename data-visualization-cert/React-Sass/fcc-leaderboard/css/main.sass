@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css?family=Anton|Open+Sans)
+
+
+
+$body-font: 'Open Sans', serif
+$title-font: 'Anton', sans-serif
+
+$light-green: #D5FFD5
+$medium-green: $light-green - #222222
+$fcc-green: #006400
+
+li
+  font-size: 150%
+
+  &:nth-child(even)
+    background: $light-green
+  &:nth-child(odd)
+    background: $medium-green
+  &:first-child
+    background: $fcc-green
+    font-weight: bold
+    color: white
+
+body
+  font-family: $body-font
+  margin: 10px
+  background: #d3d3d3
+
+.center
+  width: 100%
+  margin: 0 auto
+  text-align: center
+  display: block
+
+.title
+  font-family: $title-font
+
+h1
+  background: $fcc-green
+  width: 100%
+  border-radius: 3px
+  color: white
+  font-size: 300%
+
+  .fcclogo
+    margin: 10px 0 10px 0

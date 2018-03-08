@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title>Kevin's Simon Game</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pizzicato/0.6.0/Pizzicato.min.js"></script> -->
+
+  <link rel="stylesheet" href="css/main.css"/>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+
+	<div class = 'container complete'>
+
+		<div id = 'title-area' class = 'centered'>Kevin's Simon Game</div>
+		<div class = 'container my-container centered board'>
+			<div class="row" id = 'board'>
+				<span class = 'cell btnCell' id = 'cell3' value = '3'></span><span class = 'cell'></span><span class = 'cell btnCell' id = 'cell0' value = '0'></span>
+			</div>
+			<div class="row">
+				<span class = "center-row">
+
+
+					<div class = 'row' id = 'input-area'>
+						<div class="col-sm-6"><br/>
+							<button class = 'my-button' type="button" id = 'startBtn'>Start</button>
+							<p id = 'message'>
+
+							</p>
+						</div>
+						<div class="col-sm-6"><br/>
+							<p class>
+								<label class = 'my-button' for ="spinner">Win Number: </label>
+								<input class = 'my-spinner my-button' id= "spinner" name="value">
+							</p>
+							<p>
+								Strict mode: <button class = 'my-button' type="button" id = 'strictBtn'>Off</button>
+							</p>
+						</div>
+					</div>
+				</span>
+			</div>
+			<div class="row">
+				<span class = 'cell btnCell' id = 'cell2' value = '2'></span><span class = 'cell'></span><span class = 'cell btnCell' id = 'cell1' value = '1'></span>
+			</div>
+		</div> <!-- board container -->
+	</div> <!-- container -->
+</body>
+</html>

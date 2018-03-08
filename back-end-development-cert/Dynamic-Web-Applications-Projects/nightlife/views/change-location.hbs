@@ -1,0 +1,20 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/change-location.js"></script>
+
+
+<h3 class='center'>Change Location</h3>
+<br>
+
+<form action="/users/changeLocation" method="post">
+  <div class="form-group">
+    <label>Enter location (city and state or zip code):</label>
+    <input id='location-box' type="text" class="form-control" placeholder="location" name="location" maxlength="50" required>
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+  <button type="reset" class="btn btn-warning">Reset</button>
+  <a class="btn btn-danger" href="/">Cancel</a>
+</form>
+<br>
+<br>
+<button id='get-current-location' class='btn btn-info' type="button" name="button">Get Current Location</button>

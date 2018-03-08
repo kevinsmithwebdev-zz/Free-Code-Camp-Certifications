@@ -1,0 +1,80 @@
+.grid-item {
+  width: 100px;
+  height: 120px;
+  float: left;
+  margin: 2px;
+  text-align: center;
+  border: 1px #6C3082 solid;
+  border-radius: 5px;
+  background-color: #EFCFEF;
+}
+.grid-item > img {
+  max-width: 96px;
+  max-height: 116px;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 5px;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 3px;
+}
+
+.modal-image {
+  float: right;
+  margin: 45px 5px 10px 10px;
+}
+
+.modal-footer {
+  text-align: left;
+  /*float: left;*/
+}
+
+/*************/
+
+.small-list-item {
+  margin: 5px;
+  border: 1px #6C3082 solid;
+  border-radius: 5px;
+  background-color: #EFCFEF;
+  overflow:hidden;
+}
+
+.small-list-img {
+  max-height: 40px;
+  max-width: 30px;
+  height: auto;
+  height: auto;
+  margin: 1px 5px 1px 1px;
+  float:left;
+}
+
+.new-message-count {
+  color: green;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% { opacity: 0; }
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.book-toggle {
+  color: black;
+  font-weight: bold;
+}
+
+
+.toggle-not-selected {
+  color: #AAA;
+  font-weight: normal;
+}

@@ -1,0 +1,4 @@
+node_modules/
+public/fonts/
+.env
+twitterdev.url

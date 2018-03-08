@@ -1,0 +1,108 @@
+const DOWN_ARROW = String.fromCharCode(0x25BC);
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      sort: 'alltime',
+      arrowA: "",
+      arrowR: DOWN_ARROW,
+      loaded: false,
+      campers: { alltime: [], recent: [] }
+    }
+  } // constructor()
+
+  componentWillMount() {
+    var that = this;
+    const recentUrl = 'https://fcctop100.herokuapp.com/api/fccusers/top/recent';
+    const alltimeUrl = 'https://fcctop100.herokuapp.com/api/fccusers/top/alltime';
+
+    $.getJSON(recentUrl, function(data){
+      var stateCopy = Object.assign({}, that.state);
+      stateCopy.campers['recent'] = data;
+      that.setState(stateCopy);
+    });
+    $.getJSON(alltimeUrl, function(data){
+      var stateCopy = Object.assign({}, that.state);
+      stateCopy.campers['alltime'] = data;
+      stateCopy.loaded = true;
+      that.setState(stateCopy);
+    });
+  } // componentWillMount()
+
+  handleChangeSort(sortStr) {
+    var stateCopy = Object.assign({}, this.state);
+    stateCopy.sort = sortStr;
+    if (sortStr=='alltime') {
+      stateCopy.arrowR = DOWN_ARROW;
+      stateCopy.arrowA = "";
+    } else {
+      stateCopy.arrowA = DOWN_ARROW;
+      stateCopy.arrowR = "";
+    }
+    this.setState(stateCopy);
+  }
+
+  render() {
+    return (
+
+      <div className="container">
+        <PageHeader />
+        <br/>
+        <CamperList {...this.state} onChangeSort={this.handleChangeSort.bind(this)} />
+      </div>
+    );
+  } // render
+} // class App
+
+class PageHeader extends React.Component {
+  render() {
+    return (
+      <h1 className='center'>Kevin's Leaderboard - <a href="https://www.freecodecamp.com" target="_blank"><img className="fcclogo" src="https://www.freecodecamp.com/design-style-guide/img/freeCodeCamp.svg" alt="FreeCodeCamp logo"/></a></h1>
+    )
+  }
+}
+
+class Camper extends React.Component {
+  render() {
+    return (
+      <li className="list-group-item" key={this.props.i+1}>
+        <span className="col-md-1 center">{this.props.i+1}</span>
+        <span className="col-md-5"><img src={this.props.camper.img} alt={ 'pic for ' + this.props.camper.username} width="40"/>&nbsp;&nbsp;&nbsp;{this.props.camper.username}</span>
+        <span className="col-md-3 center">{this.props.camper.alltime}</span>
+        <span className="col-md-3 center">{this.props.camper.recent}</span>
+      </li>
+    )
+  }
+}
+
+class CamperList extends React.Component {
+  render() {
+    if (this.props.loaded) {
+      return (
+        <div>
+          <ul className="list-group">
+            <li className="list-group-item">
+              <span className="col-md-1 center">Rank</span>
+              <span className="col-md-5" id='username'>User Name</span>
+              <span className="col-md-3 center " id='alltime' onClick={this.changeSort.bind(this,'alltime')}>Alltime Points {this.props.arrowA}</span>
+              <span className="col-md-3 center" id='recent' onClick={this.changeSort.bind(this,'recent')}>Recent Points {this.props.arrowR}</span>
+            </li>
+            { this.props.campers[this.props.sort].map(function(camper, i) { return ( <Camper camper={camper} i={i}/> ) }) }
+          </ul>
+        </div>
+      )
+    } else {
+      return (<h3 className="center">Loading ...</h3>)
+    }
+  }
+  changeSort(sortStr) {
+    this.props.onChangeSort(sortStr);
+  }
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);

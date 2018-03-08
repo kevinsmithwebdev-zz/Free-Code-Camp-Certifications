@@ -1,0 +1,27 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../../js/yelp.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/yelp.css"></link>
+<link rel="stylesheet" type="text/css" href="../../css/home.css"></link>
+
+<h4>
+  <div class='center'>
+    <span>Current Search String:&nbsp;&nbsp;{{user.location}}</span>
+    <a href="/users/changeLocation" class="btn btn-warning btn-xs">Change</a><br>
+    <span>Search Returned For:&nbsp;&nbsp;<span id='return-box'></span><br>
+    <h5>Powered by Yelp Fusion</h5>
+  </div>
+</h4>
+
+<div class="center pagination-box">
+  <span id='rew-page' class='pagination pagination-btn pagination-down-btn'><i class="fa fa-fast-backward fa-2x" aria-hidden="true"></i></span>
+  <span id='left-page' class='pagination pagination-btn pagination-down-btn'><i class="fa fa-play fa-flip-horizontal fa-2x" aria-hidden="true"></i></span>
+  <span id='page-display-box' class='pagination pagination-display'>1</span>
+  <span id='right-page' class='pagination pagination-btn pagination-btn-effect pagination-btn-enabled'><i class="fa fa-play fa-2x" aria-hidden="true"></i></span>
+</div>
+
+<div id='list-area' class='container'>
+  <div id='venue-list'>
+    <!-- JQuery will fill -->
+  </div>
+</div>

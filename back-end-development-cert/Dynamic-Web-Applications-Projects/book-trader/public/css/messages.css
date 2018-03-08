@@ -1,0 +1,49 @@
+.messages-summary {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#total-messages {
+  color: black;
+}
+#unread-messages {
+  color: green;
+}
+#read-messages {
+  color: darkorange;
+}
+
+
+.msg-list-box div {
+  color: black;
+}
+.msg-unread {
+  background-color: lightgreen;
+  border: 1px green solid;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 4px;
+}
+.msg-read {
+  background-color: orange;
+  border: 1px darkorange solid;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 4px;
+}
+
+.modal-image {
+  max-height: 100px;
+  max-width: 60px;
+  height: auto;
+  width: auto;
+  float: right;
+  margin: 5px 5px 10px 10px;
+}
+
+.modal-footer {
+  display:inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin:0px auto;
+}

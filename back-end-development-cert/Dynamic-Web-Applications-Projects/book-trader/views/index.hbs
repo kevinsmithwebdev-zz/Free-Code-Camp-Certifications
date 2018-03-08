@@ -1,0 +1,35 @@
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+
+<script>
+  var userData = JSON.parse(decodeURIComponent("{{{encodedUser}}}"));
+</script>
+
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+<link rel="stylesheet" href="/css/home.css" />
+
+<h2 class="page-header">Home</h2>
+
+<h3>User Actions</h3>
+<h5><a id="messages-btn" href="messages">View Messages</a></h5>
+<h5><a href="books/add">Add New Book</a></h5>
+
+<h3>Books</h3>
+<h5 class="no-select"><span id="book-toggle-others" class="book-toggle">Others</span>|<span id="book-toggle-mine" class="book-toggle">Mine</span></h5>
+<div id="masonry-grid">
+  <!-- JQuery will fill. -->
+</div>
+
+<!-- modal window -->
+
+<div class="modal fade" id="select-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div id="modal-header" class="modal-header"></div>
+      <div id="modal-body" class="modal-body"></div>
+      <div id="modal-footer" class="modal-footer"></div>
+    </div>
+  </div>
+</div>

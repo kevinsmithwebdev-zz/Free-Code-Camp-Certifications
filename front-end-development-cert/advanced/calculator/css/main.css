@@ -1,0 +1,58 @@
+.bgd {
+	background-color: #F3EFE0;
+}
+
+#calc-body {
+	background-color: #778899;
+  display: inline-block;
+	margin: 0 auto;
+  width: 344px;
+  height: 535px;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+button {
+	font-size: 30px !important;
+  font-weight: bold !important;
+  color: #DDDDDD !important;
+  border-radius: 10px !important;
+  border: none;
+  background-color: #775566;
+  margin: 1px !important;
+	padding: 0px;
+	height: 70px;
+  width: 70px;
+}
+
+h1 {
+	text-align: center;
+}
+
+
+.centered {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#display-area {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	height: 70px;
+	text-align: right;
+	background-color: white;
+	color: black;
+}
+
+#equation-area {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	height: 50px;
+	text-align: right;
+	background-color: white;
+	color: black;
+}
+
+.btn:active {
+    background: #645 !important;
+}

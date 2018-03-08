@@ -1,0 +1,83 @@
+#full {
+	width: 640px;
+	height: 750px;
+	margin: 0 auto;
+	background-color: #cccccc;
+	border-radius: 0 0 5px 5px;
+}
+
+#btn-start {
+	font-size: 150%;
+	font-size: 150%;
+}
+
+
+#timer-area {
+	font-family: 'Average', serif;
+	font-size: 150%;
+	font-weight: bold;
+	width: 500px;
+	display: inline;
+	position: absolute;
+	float: left;
+	margin-left: 50px;
+	margin-top: 80px;
+}
+
+#message-area {
+	height: 100px;
+}
+
+#time {
+	font-family: 'Average', serif;
+	font-size: 200%;
+	font-weight: bold;
+}
+
+
+#input-area {
+	font-family: 'Average', serif;
+	font-size: 150%;
+	width: 300px;
+	display: inline;
+	position: absolute;
+	float: left;
+	margin-left: 155px;
+	margin-top: 330px;
+}
+
+.my-input {
+	margin: 0 auto;
+}
+
+#btn-start {
+	background-color: green;
+}
+
+#title-area {
+	font-family: 'Fjalla One', sans-serif;
+	color: #ffffff;
+	font-size: 300%;
+	font-weight: bold;
+	text-align: center;
+	background-image: url("http://i.dailymail.co.uk/i/pix/2016/11/03/00/3A0129FD00000578-0-image-a-8_1478132633138.jpg");
+	background-color: #cccccc;
+	border-radius: 0 0 3px 3px;
+}
+
+#progress {
+  margin: 0 auto;
+  width: 600px;
+  height: 600px;
+}
+
+.container {
+	text-align: center;
+}
+
+
+#footnote {
+	font-family: 'Average', serif;
+	font-size: 130%;
+	font-weight: bold;
+}

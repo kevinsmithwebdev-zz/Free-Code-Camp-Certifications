@@ -1,0 +1,77 @@
+body {
+  background-color: black;
+  color: #EEE;
+}
+
+
+.venue-item {
+  border: 1px darkblue solid;
+  background-color: #111;
+  border-radius: 5px;
+  margin: 2px;
+  min-height: 42px;
+}
+
+.venue-image {
+  border-radius: 2px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.venue-name {
+  padding: 0 0 0 22px;
+}
+
+.venue-text {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+
+.going-text {
+  font-size: 10px !important;
+  white-space: nowrap;
+}
+
+.going-btn {
+  border-radius: 4px;
+  padding: 2px;
+  margin: 3px;
+}
+
+.status-not-going {
+  background-color: rgba(255,0,0,0.3);
+  border: 1px red solid;
+}
+.status-not-going:hover {
+  background-color: rgba(255,0,0,0.7);
+}
+
+
+.status-going {
+  background-color: rgba(0,255,0,0.3);
+  border: 1px green solid;
+}
+.status-going:hover {
+  background-color: rgba(0,255,0,0.7);
+}
+
+
+.effectfront {
+  margin: 0 auto;
+  z-index: 0;
+}
+.effectfront:hover {
+  -webkit-transform: scale(6);
+  -moz-transform: scale(6);
+  -o-transform: scale(6);
+  transform: scale(6);
+  transition: all 0.3s 0.3s ease-in;
+  -webkit-transition: all 0.3s 0.3s ease-in;;
+  z-index: 9999999999999999;
+}

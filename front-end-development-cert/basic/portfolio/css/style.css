@@ -1,0 +1,78 @@
+body {
+  margin: 50px;
+  background-color: #f5f5ea;
+	font-family: Times, serif;
+	width: 75%;
+	margin: 0 auto;
+}
+
+img {
+    width: 100%;
+}
+
+#navBar {
+  background-color: #FF7518;
+  font-family: Impact, Charcoal, sans-serif;
+	font-size: 200%;
+	color: white;
+	border-radius: 5px;
+}
+
+#about {
+	background-color: #b4dbc0;
+	border-radius: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#portfolio {
+	background-color: #eae3ea;
+	border-radius: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#contact {
+	background-color: #a7b3a5;
+	border-radius: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+.right-side-button{
+  float: right;
+	margin-left: 10px;
+}
+
+.btn-info {
+  color: #ffffff;
+  background-color: #FF7518;
+  border-color: #ffffff;
+}
+
+.btn-info:hover {
+  color: #ffffff;
+  background-color: #FE5A1D;
+  border-color: #ffffff;
+}
+
+.btn-info:visited {
+  color: #ffffff;
+  background-color: #FE5A1D;
+  border-color: #ffffff;
+}
+
+.sectionTitle {
+	text-align: center;
+}
+
+.btn-contact {
+	margin: 20px;
+}
+
+#contactButtons {
+	margin-left: 50px;
+}

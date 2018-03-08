@@ -1,0 +1,396 @@
+let ReactPropTypes = React.PropTypes;
+let Accordion = ReactBootstrap.Accordion;
+let Panel = ReactBootstrap.Panel;
+let Button = ReactBootstrap.Button;
+let ButtonGroup = ReactBootstrap.ButtonGroup;
+let Modal = ReactBootstrap.Modal;
+let FormGroup = ReactBootstrap.FormGroup;
+let FormControl = ReactBootstrap.FormControl;
+let ControlGroup = ReactBootstrap.ControlGroup;
+let ControlLabel = ReactBootstrap.ControlLabel;
+
+const LS_NAME = "kevinsRecipeBox";
+const MY_PRELOAD_RECIPES =  [
+        {
+          id: 1,
+          name: "Kevin's World Famous Spaghetti Sause",
+          ingredientsArr: [
+            "2 tablespoons olive oil", 
+            "1 pound ground beef (and veal and pork if desired)",
+            "2 cups finely choppped onions",
+            "½ cup finely chopped celery",
+            "½ cup finely chopped carrot",
+            "5 heads of garlic, crushed",
+            "2 (28-ounce) can of peeled, seeded and chopped tomatoes",
+            "1 small can tomato paste",
+            "4 cups beef stock",
+            "3 bay leaves",
+            "1 tablespoon dried oregano",
+            "1 tablespoon dried basil"],
+          instructionsArr: [
+            "In large saucepan, over medium heat, brown meat in oil, 4-6 minutes",
+            "Add onions, celery, carrots, and garlic - cook for 5 minutes",
+            "Add tomatoes - cook for 5 minutes",
+            "Whisk tomato paste into stock, add to sauce",
+            "Add herbs",
+            "Bring to a boil and then reduce to simmer",            
+            "Let cook for 2-4 hours",
+            "Add salt and pepper, as desired"
+          ],
+          commentsArr: ["OK, I confess, this is largely based on Emiril's recipe", "You can fish out the bay leaves if you wish, but our familiy tradition was that whoever got a bay leaf had to do the dishes.", "Seriously, this is the best spaghetti sauce I've ever eaten."]
+        },
+        {
+          id: 2,
+          name: "Carbonade Flamande",
+          ingredientsArr: [
+            "1¼kg (2¾ lb.) stewing beef (I prefer chuck roast), trimmed and cut into 2½cm (1”) cubes",
+            "400ml (1¾ cups or 14 fl oz) Belgian brown ale (I like the Brother Thelonious from the local North Coast Brewing.)", 
+            "5 garlic cloves, lightly crushed",
+            "2 bay leaf", 
+            "3 tbsp plain flour, seasoned with salt and pepper", 
+            "2-3 tbsp olive oil",
+            "250g (½ lb.) diced pancetta (or bacon)", 
+            "2 carrots, chopped", 
+            "1 large onion, sliced into large pieces",
+            "3 shallots, chopped finely", 
+            "1 leek cut and discard dark green portion, slice rest lengthwise, clean and slice into slivers",  
+            "1 tbsp tomato paste",
+            "350ml (1½ cups) beef stock", 
+            "1 tbsp dried thyme", 
+            "1 teaspoon each rosemary and sage (If I don’t have rosemary and sage, I’ll often substitute herb de Provence)",
+            "1 tsp Dijon mustard", 
+            "brown sugar to taste (I don’t bother.)"],
+          instructionsArr: [
+            "Marinate the beef overnight in the ale with the garlic and bay leaves.",
+            "The next day, drain the beef from the marinade, reserving the marinade. Pat the meat dry with kitchen paper and toss it in the seasoned flour until evenly coated. Shake off any excess flour.",
+            "Heat a large pan/pot to medium and fry the pancetta/bacon for 6-8 minutes, stirring occasionally, until crisp and golden. Scoop the pancetta out with a slotted spoon and set aside.",
+            "Turn heat to medium/high and fry the beef in the leftover grease (add oil as needed) in 3-4 batches for about 5 minutes per batch, stirring occasionally, until it is a rich golden brown all over.",
+            "Remove the meat with a slotted spoon to a plate and set aside. Don’t worry if the bottom of the pot is starting to brown, this all adds to the flavor of the finished dish.",
+            "Preheat the oven to160C (320F). Tip the carrots, onions and leek into the pot and fry, stirring occasionally, until they start to brown – this takes about 12 minutes. Spoon in the tomato purée and continue to cook for 2 minutes, stirring constantly.",
+            "Add the beef, pancetta/barcon, and pour in the reserved marinade. Bring to a simmer, scraping any sticky bits off the bottom of the pan, and then add all the beef stock, herbs, and mustard to the pot.",
+            "Season with salt and pepper and bring everything to the boil. Remove from the heat. Cover with a lid and cook in the oven for 2 hours, stirring once halfway through.",
+            "If you want, in the last 15 minutes you can break the beef into smaller chunks with a wooden spoon against the pan.",
+            "When the beef is ready, taste for seasoning and add more salt and pepper if you think it needs it. The same with the brown sugar.",
+            "Fish out the two bay leaves.",
+            "Serve over egg noodles."],
+          commentsArr: [
+            "In Belgium (where this is practically a national dish) it is served over french fries",
+            "Everyone to whom I have served this - this becomes their new favorite dish.",
+          ]
+        },
+        {
+          id: 3,
+          name: "Mexican Quinoa",
+          ingredientsArr: [
+            "1 tablespoon olive oil", 
+            "½ cup diced yellow onion", 
+            "½ lb lean ground beef", 
+            "2 cloves garlic, minced", 
+            "½ a large jalapeno, minced (taste before adding all of the jalapeno, depending on how spicy you want the dish to be)", 
+            "¾ cup quinoa", 
+            "1 cup beef broth", 
+            "1 (15-ounce) can black beans, drained and rinsed", 
+            "1 (14.5 oz) can fire-roasted diced tomatoes (not drained)", 
+            "1 cup corn kernels", 
+            "1 teaspoon chili powder", 
+            "½ teaspoon cumin", 
+            "salt and pepper to taste"],
+          instructionsArr: [
+            "Heat the olive oil in a large skillet with a lid over medium heat.  Brown beef.", 
+            "Sauté the garlic and jalapeno until it starts to brown, about one minute. ", 
+            "Add the quinoa, vegetable broth, black beans, diced tomatoes, corn, chili powder, cumin, ¼ tsp salt to the skillet and stir to mix well.", 
+            "Bring the liquid to a boil, then reduce heat to medium low and cover the pan with the lid.", 
+            "Cook covered for 20 minutes, until the quinoa is cooked through, but stir it halfway through cooking just to make sure the quinoa cooks evenly."
+          ],
+          commentsArr: [
+            "I found this in a magazine, somewhere.", 
+            "OK, this isn't a gourmet feast, but it tastes good and is a great way to make a healthy (packed with protein) meal, easily."]
+        }];
+
+
+//****************************************************************/
+
+class Header extends React.Component {
+  render() {
+    return (
+      <div><h1 className="center">Kevin's Recipe Box</h1><br/></div>
+    );
+  }
+}
+
+//****************************************************************/
+
+class EditRecipe extends React.Component {
+  render() {
+    return (
+      <Modal show={this.props.isEditing||this.props.isAdding}>
+        <Modal.Header>
+          <Modal.Title>{((this.props.isAdding)?"Adding Recipe":"Editing Recipe: ") + this.props.recipe.oldName}</Modal.Title>
+        </Modal.Header>
+        
+        <Modal.Body>
+          <strong>Name:</strong> (required)       
+            <FormControl type="text" value={this.props.recipe.name} placeholder="enter recipe name (required)"
+              onChange={this.onChangeText.bind(this, 'name')} />
+          <br/>
+          <strong>Ingredients:</strong> (separated by semicolons, required)
+            <FormControl type="text" value={this.props.recipe.ingredientsStr} placeholder="enter ingredients, separated by semicolons (required)"
+              onChange={this.onChangeText.bind(this, 'ingredientsStr')} />
+          <br/>
+          <strong>Instructions:</strong> (separated by semicolons)        
+            <FormControl type="text" value={this.props.recipe.instructionsStr} placeholder="enter instructions, separated by semicolons"
+              onChange={this.onChangeText.bind(this, 'instructionsStr')} />
+          <br/>
+          <strong>Comments:</strong> (separated by semicolons)
+            <FormControl type="text" value={this.props.recipe.commentsStr} placeholder="enter comments, separated by semicolons (required)"
+              onChange={this.onChangeText.bind(this, 'commentsStr')} />
+        </Modal.Body>        
+        
+        <Modal.Footer>
+          <Button bsStyle="success" onClick={this.onSave.bind(this)}>Save</Button>
+          <Button bsStyle="danger" onClick={this.onCancel.bind(this)} >Cancel</Button>
+        </Modal.Footer>
+      </Modal>
+    );
+  }
+  
+  onChangeText(field, e) {
+    this.props.handleChangeText(field, e.target.value);
+  }
+  
+  onCancel() {
+    this.props.handleCancelEdit();
+  }
+  
+  onSave() {
+    let errArr = [];
+    if (!this.props.recipe.name.length) 
+      errArr.push("Must include a name.");
+    if (!this.props.recipe.ingredientsStr.length)
+      errArr.push("Must include at least one ingredient.");
+    if (errArr.length)
+      alert(errArr.join("\n"));
+    else
+      this.props.handleSaveEdit();
+  }
+}
+
+//****************************************************************/
+
+class Recipes extends React.Component {
+  formatRecipePanel(recipe) {
+    // console.log("Recipes.formatRecipePanel " + index);
+    return (
+       <Panel header={recipe.name} bsStyle="primary" eventKey={recipe.id}>
+        <p><strong>Ingredients:</strong></p>
+        <ul>
+          {recipe.ingredientsArr.map(ingredient => {
+            return <li>{ingredient}</li>;
+          })}
+        </ul>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+          {recipe.instructionsArr.map(instruction => {
+            return <li>{instruction}</li>;
+          })}
+        </ol>
+        <p><strong>Comments:</strong></p>
+        <ul>
+          {recipe.commentsArr.map(comment => {
+            return <li>{comment}</li>;
+          })}
+        </ul>
+        <br /><br />
+        <ButtonGroup bsSize="medium">
+          <Button bsStyle="warning" onClick={this.onEditClick.bind(this, recipe.id)}>Edit</Button>
+          <Button bsStyle="danger" onClick={this.onDeleteClick.bind(this, recipe.id)}>Delete</Button>
+        </ButtonGroup>
+      </Panel>   
+    );
+  }
+  
+  onDeleteClick(id) {
+    //  console.log("Recipes.onDeleteRecipe" + id);
+    this.props.handleDeleteRecipe(id);
+  }
+  
+  onEditClick(id) {
+    // console.log("Recipes.onEditRecipe = " + id);
+    this.props.handleEditRecipe(id);
+  }
+  
+  render() {
+    return (
+      <div>
+  <Accordion>
+    {this.props.recipes.map((recipe) => this.formatRecipePanel(recipe))}
+  </Accordion>
+      </div>
+    );
+  }
+}
+
+//****************************************************************/
+
+class Controls extends React.Component {
+  render() {
+    return (
+      <div className="left">
+        <Button bsStyle="success" onClick={this.onAddRecipe.bind(this)}>Add New Recipe</Button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{(!this.props.isLocalStorage)?"Note: local storage is disabled on your browser":""}
+      </div>
+    );
+  }
+  
+  onAddRecipe() {
+    this.props.handleAddRecipe();
+  }
+}
+
+//****************************************************************/
+
+class RecipeBox extends React.Component {
+  constructor() {
+    super();
+    let loadRecipes = (typeof localStorage[LS_NAME] != "undefined") ? JSON.parse(localStorage[LS_NAME]): MY_PRELOAD_RECIPES;
+    
+    this.state = ({
+      recipes: loadRecipes,
+      dummyRecipe: { id: -1, name: "blank name", oldName: "blank name", ingredientsStr: "blank ingredients", instructionsStr: "blank instructions", commentsStr: "blank comments" }, 
+      isEditing: false,
+      isAdding: false,
+      isLocalStorage: (typeof(Storage)!=="undefined"),
+      indexToEdit: -1
+    });
+  }
+
+  handleEditRecipe(id) {
+    let index = this.getRecipeIndexFromId(id);
+    
+    let newDummy = { 
+              id: id, 
+              name: this.state.recipes[index].name,
+              oldName: this.state.recipes[index].name,
+              ingredientsStr: this.state.recipes[index].ingredientsArr.join(";"),
+              instructionsStr: this.state.recipes[index].instructionsArr.join(";"),
+              commentsStr: this.state.recipes[index].commentsArr.join(";")
+    }
+    
+    this.setState({ dummyRecipe: newDummy });
+    this.setState({ isEditing: true, indexToEdit: this.getRecipeIndexFromId(id)});
+  }
+  
+  handleAddRecipe(id) {
+    let index = -1;
+    
+    let newDummy = { 
+              id: -1, 
+              name: "",
+              oldName: "",
+              ingredientsStr: "",
+              instructionsStr: "",
+              commentsStr: ""
+    }
+    
+    this.setState({ dummyRecipe: newDummy });
+    this.setState({ isAdding: true, indexToEdit: -1});
+  }
+  
+  handleDeleteRecipe(id) {
+
+    let newRecipes = this.state.recipes;
+    newRecipes.splice(this.getRecipeIndexFromId(id), 1);
+    this.setState({ recipes: newRecipes });
+    if (this.state.isLocalStorage)
+      localStorage.setItem(LS_NAME, JSON.stringify(newRecipes));
+  }
+  
+  getRecipeIndexFromId(id) {
+    var recipes = this.state.recipes;
+    for (let i = 0; i < recipes.length; i++) {
+      if (recipes[i].id == id) return i;
+    }
+    return -1;
+  }
+  
+  handleChangeText(field, text) {
+    let newDummy = this.state.dummyRecipe;
+    newDummy[field] = text;
+    this.setState({ dummyRecipe: newDummy });
+  }
+  
+  handleCancelEdit() {
+    this.setState({ isEditing: false, isAdding: false });
+  }
+  
+  handleSaveEdit() {
+    let newRecipes = this.state.recipes;
+    let index = this.state.indexToEdit;
+
+    if (this.state.isAdding) {
+      index = newRecipes.length;
+      newRecipes.push({
+        id: Math.max(...newRecipes.map(recipe => recipe.id)) + 1,
+        name: "",
+        ingredientsArr: "",
+        instructionsArr: "",
+        commentsArr: ""
+      });
+    }
+
+    newRecipes[index].name = this.state.dummyRecipe.name.trim();
+    newRecipes[index].ingredientsArr = 
+          this.state.dummyRecipe.ingredientsStr.split(";").map((str) => { return str.trim() });
+    newRecipes[index].instructionsArr = 
+          this.state.dummyRecipe.instructionsStr.split(";").map((str) => { return str.trim() });
+    newRecipes[index].commentsArr = 
+          this.state.dummyRecipe.commentsStr.split(";").map((str) => { return str.trim() });
+
+    this.setState({ isEditing: false, isAdding: false, recipes: newRecipes });
+    if (this.state.isLocalStorage)
+      localStorage.setItem(LS_NAME, JSON.stringify(newRecipes));
+  }
+
+  render() {
+    // console.log("RecipeBox.render");
+    
+    return (
+      <div>        
+        <EditRecipe isEditing={this.state.isEditing} isAdding={this.state.isAdding} recipe={this.state.dummyRecipe} 
+          handleChangeText={this.handleChangeText.bind(this)} handleCancelEdit={this.handleCancelEdit.bind(this)}
+          handleSaveEdit={this.handleSaveEdit.bind(this)} />
+        <Recipes recipes={this.state.recipes} handleDeleteRecipe={this.handleDeleteRecipe.bind(this)} handleEditRecipe={this.handleEditRecipe.bind(this)} />
+        <Controls handleAddRecipe={this.handleAddRecipe.bind(this)} isLocalStorage={this.state.isLocalStorage}/>
+      </div>
+    );
+  }
+} // RecipeBox
+
+//****************************************************************/
+
+class Footer extends React.Component {
+  render() {
+    return (
+      <div>
+        <br/><br/>
+        <h4 className="center">Made for <a href="https://www.freecodecamp.com">Free Code Camp</a>'s Data Visualizatin Course</h4>
+      </div>
+    );
+  }
+} // Footer
+
+//****************************************************************/
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className="container">
+        <Header />
+        <RecipeBox />
+        <Footer />
+      </div>
+    );
+  } // render
+} // App
+
+ReactDOM.render(<App />, document.getElementById("app"));

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Chewy');
+
+body {
+	background-color: #FFCC99;
+	padding: 1em;
+}
+
+#titleArea {
+	color: black;
+	font-family: 'Chewy', cursive;
+	text-align: center;
+	font-weight: bold;
+	font-size: 600%;
+	padding: 1em;
+}
+
+#status-area {
+	font-size: 250%;
+	text-align: center;
+}
+.btn-group {
+  width: 100%;
+  margin-top: .5em;
+  margin-bottom: .25em;
+}
+.btn-rslt {
+  width: 25%;
+  border-top-left-radius: .5em;
+  border-bottom-left-radius: .5em;
+  font-weight: bold;
+  font-size: 150%;
+}
+.btn-dscrp {
+  text-align: left;
+  width: 75%;
+  border-top-right-radius: .5em;
+  border-bottom-right-radius: .5em;
+	font-size: 150%;
+}
+
+.btn-lone {
+	margin-right: .5em;
+	margin-left: .5em;
+	font-size: 100%;
+  border-radius: .25em;
+}
+
+.search-ready {
+	font-size: 150%;
+  display: inline;
+}
+
+.search-results {
+	font-size: 150%;
+	display: none;
+}
+
+.btn-my-rslt {
+		background-color: #C5EFFD;
+}
+
+.btn-my {
+		background-color: #003366;
+		color: white;
+}
+
+input {
+	border-radius: .25em;
+	font-size: 20px;
+}

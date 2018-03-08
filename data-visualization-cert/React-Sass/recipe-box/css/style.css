@@ -1,0 +1,27 @@
+body {
+  widht: 80%;
+}
+
+.center {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+.left {
+  text-align: left;
+  display: block;
+}
+
+.panel-heading {
+  padding: 0;
+}
+
+.panel-title a {
+  display: block;
+  padding: 15px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+}

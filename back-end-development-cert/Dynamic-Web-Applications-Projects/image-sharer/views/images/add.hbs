@@ -1,0 +1,25 @@
+<script src="/js/add.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/css/add.css">
+
+<h3>in add.hbs</h3>
+<p>{{user.username}}</p>
+
+<div id="image-preview" class="">
+
+</div>
+
+<form action="/images/add" method="post">
+  <div class="form-group">
+    <label>Image Link</label>
+    <input id="image-url" type="url" class="form-control" placeholder="image url..." name="url" minlength="4" maxlength="512" required>
+  </div>
+  <div class="form-group">
+    <label>Title</label>
+    <input type="text" class="form-control" placeholder="title" name="title" minlength="4" maxlength="100" required>
+  </div>
+  <div class='center'>
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="reset" class="btn btn-warning">Reset</button>
+    <a class="btn btn-danger" href="/">Cancel</a>
+  </div>
+</form>

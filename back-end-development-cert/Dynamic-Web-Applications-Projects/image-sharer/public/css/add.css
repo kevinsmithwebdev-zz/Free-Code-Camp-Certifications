@@ -1,0 +1,18 @@
+#image-preview {
+  width: 410px;
+  height: 410px;
+  background-color: #e6f7ff;
+  border: 1px #4ad solid;
+  border-radius: 5px;
+}
+
+.image-preview {
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  display:block;
+  margin: 0 auto;
+  border-radius: 5px;
+}

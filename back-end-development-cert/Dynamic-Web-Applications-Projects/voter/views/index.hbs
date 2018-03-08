@@ -1,0 +1,21 @@
+<script type="text/javascript" src="/controllers/clickController.client.js"></script>
+
+<h2 class="page-header">Dashboard</h2>
+
+<h3>User Actions</h3>
+<h5><a href="/polls/new">Create New Poll</a></h5>
+<h5><a href="/polls/all">View All Polls</a></h5>
+<h5><a href="/users/change-password">Change Your Password</a></h5>
+
+<h3>Your polls</h3>
+
+{{#unless polls}}
+  <h4>You have not created any polls yet.</h4>
+{{/unless}}
+
+{{#each polls}}
+  <div>
+    <button class="btn-primary poll-button poll-button-link" value="?creator={{creator}}&poll={{title}}">{{title}}</button>
+    <button class="btn-danger poll-button poll-button-delete" value="{{_id}}">X</button>
+  </div>
+{{/each}}

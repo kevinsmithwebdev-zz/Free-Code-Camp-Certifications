@@ -1,0 +1,34 @@
+<script>
+  var userData = JSON.parse(decodeURIComponent("{{{encodedUser}}}"));
+</script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/messages.js"></script>
+<link rel="stylesheet" href="/css/messages.css" />
+
+<h3>Messages</h3>
+<div id='total-messages' class='messages-summary'>
+  <span class='messages-label'>Total messages: </span><span class='data'>0</span>
+</div>
+<div id='unread-messages' class='messages-summary'>
+  <span class='messages-label'>Unread messages: </span><span class='data'>0</span>
+</div>
+<div id='read-messages' class='messages-summary'>
+  <span class='messages-label'>Read messages: </span><span class='data'>0</span>
+</div>
+
+<div class="messages-list-box">
+  <div id='messages-list-unread'></div>
+  <div id='messages-list-read'></div>
+</div>
+
+<!-- modal window -->
+
+<div class="modal fade" id="select-modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div id="modal-header" class="modal-header"></div>
+      <div id="modal-body" class="modal-body"></div>
+      <div id="modal-footer" class="modal-footer"></div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+body {
+  margin: 60px;
+}
+
+.myBody {
+  background-color: #def5de;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.quoteAuthor {
+	margin-left: 4em;
+	font-style: italic;
+}
+
+.title-image {
+  width: automatic;
+  height: 300px;
+}

@@ -1,0 +1,157 @@
+$num-cols: 120
+$num-rows: 80
+
+$border-color: #333
+$board-color: #444
+
+$stone-color: black
+$floor-color: #EEE
+$floor-grid-color: $floor-color - #111
+$player-color: blue
+$monster-color: red
+$health-color: green
+$weapon-color: orange - #111
+$boss-color: red
+
+$cell-size: 16px
+
+$dungeon-width: $cell-size * $num-cols - 292
+$dungeon-height: $cell-size * $num-rows - 446
+
+$align-adjust: 23%
+
+.opacity-0
+  opacity: 0
+  
+.opacity-1
+  opacity: 1
+  
+.opacity-2
+  opacity: 0.4
+
+body
+  width: 100%
+
+h1
+  font-weight: bold
+  font-size: 48px
+  
+.header
+  background-color: #CCF
+  border-radius: 4px
+
+.stats-title
+  font-weight: bold
+  font-size: 36px
+  
+.stats-data
+  font-size: 22px
+  text-align: left
+  
+.stats-messages
+  font-size: 22px
+  background-color: $board-color + #555
+  text-align: left
+  border-radius: 5px
+
+.white-msg
+  color: $floor-color + #111
+.player-msg
+  color: $player-color
+.monsters-msg
+  color: $monster-color - #222
+.health-msg
+  color: $health-color - #111
+.weapons-msg
+  color: $weapon-color + #111
+.boss-msg
+  color: $boss-color
+  
+  
+.over-title
+  font-size: 32px
+  text-align: center
+  
+.over-body
+  font-size: 28px
+  text-align: center  
+
+.rules
+  font-size: 19px
+  text-align: left
+.bold
+  font-weight: bold
+  
+.btn-default
+  color: #333333
+  background-color: #333333
+  border-color: #cccccc
+
+  
+  
+.lights-on
+  background-color: white
+  color: black
+  font-weight: bold
+  border: 2px solid black
+  
+.lights-off
+  background-color: black
+  color: white !important
+  font-weight: bold
+  border: 2px solid black
+
+  
+.controls-box
+  width: $dungeon-width
+  height: 150px
+  margin: 0 auto
+  text-align: center
+  position: relative
+  right: $align-adjust
+  border-radius: 5px 5px 0 0
+  
+.stats-row
+  width: $dungeon-width
+
+.center
+  text-align: center
+
+.cell
+  height: $cell-size
+  width: $cell-size
+  display: inline-block
+  margin: 0
+  padding: 0
+  line-height: 0
+  position: relative
+
+.dungeon
+  line-height: 0
+  border: 10px solid $board-color
+  color: white
+  background-color: $border-color
+  border-radius: 0 0 5px 5px
+  width: $dungeon-width
+  height: $dungeon-height
+  margin: 0 auto
+  text-align: center
+  position: relative
+  right: $align-adjust
+
+.cell-0
+  background-color: $stone-color
+.cell-1
+  background-color: $floor-color
+  border: 1px solid $floor-grid-color
+.cell-2
+  background-color: $player-color
+.cell-3
+  background-color: $monster-color
+.cell-4
+  background-color: $health-color
+.cell-5
+  background-color: $weapon-color
+.cell-6
+  background-color: $boss-color
+  

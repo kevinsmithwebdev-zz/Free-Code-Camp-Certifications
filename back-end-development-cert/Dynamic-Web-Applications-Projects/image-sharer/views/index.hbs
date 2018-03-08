@@ -1,0 +1,42 @@
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script>
+  var userData = {}
+  if ({{isLoggedIn}}) {
+    userData = JSON.parse(decodeURIComponent("{{{encodedUser}}}"))
+    userData.isLoggedIn = true
+  } else {
+    userData = { isLoggedIn: false, id: 'view-only', displayname: 'view-only' }
+  }
+</script>
+<script src="/js/index.js" charset="utf-8"></script>
+<script src="/js/modal.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/css/index.css">
+<link rel="stylesheet" href="/css/modal.css">
+
+<hr>
+
+<h3>Wall - <span id="wall-name"></span></h3>
+<div id="wall-buttons">
+  {{#if user}}
+    <span id="wall-btn-home" class="btn btn-default wall-btn">Home</span>
+  {{/if}}
+  <span id="wall-btn-recent" class="btn btn-default wall-btn">Recent</span>
+</div>
+
+<hr>
+
+<div id="wall-grid">
+  <!-- JQuery will fill. -->
+</div>
+
+<div id="modal-container" class="container">
+  <div id="my-modal" class="modal">
+    <span id="modal-close" class="close">&times;</span>
+    <img id="modal-image" class="modal-content">
+    <div id="caption"></div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.btn-login {
+  color: white;
+  margin: 20px;
+}
+
+.btn-login:hover {
+  color: #CCC;
+}
+
+.btn-facebook {
+  background-color: #3B5998;
+  color: white;
+}
+
+.btn-local {
+  background-color: #222;
+  color: white;
+}

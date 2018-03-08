@@ -1,0 +1,492 @@
+{
+ "kind": "customsearch#search",
+ "url": {
+  "type": "application/json",
+  "template": "https://www.googleapis.com/customsearch/v1?q={searchTerms}&num={count?}&start={startIndex?}&lr={language?}&safe={safe?}&cx={cx?}&cref={cref?}&sort={sort?}&filter={filter?}&gl={gl?}&cr={cr?}&googlehost={googleHost?}&c2coff={disableCnTwTranslation?}&hq={hq?}&hl={hl?}&siteSearch={siteSearch?}&siteSearchFilter={siteSearchFilter?}&exactTerms={exactTerms?}&excludeTerms={excludeTerms?}&linkSite={linkSite?}&orTerms={orTerms?}&relatedSite={relatedSite?}&dateRestrict={dateRestrict?}&lowRange={lowRange?}&highRange={highRange?}&searchType={searchType}&fileType={fileType?}&rights={rights?}&imgSize={imgSize?}&imgType={imgType?}&imgColorType={imgColorType?}&imgDominantColor={imgDominantColor?}&alt=json"
+ },
+ "queries": {
+  "request": [
+   {
+    "title": "Google Custom Search - guitar",
+    "totalResults": "51400000",
+    "searchTerms": "guitar",
+    "count": 10,
+    "startIndex": 1,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "high",
+    "cx": "001813795373409118512:noq4cwauga0"
+   }
+  ],
+  "nextPage": [
+   {
+    "title": "Google Custom Search - guitar",
+    "totalResults": "51400000",
+    "searchTerms": "guitar",
+    "count": 10,
+    "startIndex": 11,
+    "inputEncoding": "utf8",
+    "outputEncoding": "utf8",
+    "safe": "high",
+    "cx": "001813795373409118512:noq4cwauga0"
+   }
+  ]
+ },
+ "context": {
+  "title": "ksj-fccbe-imgsearch"
+ },
+ "searchInformation": {
+  "searchTime": 0.356508,
+  "formattedSearchTime": "0.36",
+  "totalResults": "51400000",
+  "formattedTotalResults": "51,400,000"
+ },
+ "items": [
+  {
+   "kind": "customsearch#result",
+   "title": "Guitar Center: Music Instruments, Accessories and Equipment",
+   "htmlTitle": "\u003cb\u003eGuitar\u003c/b\u003e Center: Music Instruments, Accessories and Equipment",
+   "link": "http://www.guitarcenter.com/",
+   "displayLink": "www.guitarcenter.com",
+   "snippet": "Guitar Center is the world's largest musical instruments retailer. Shop Guitars, \nBass, Drums, Amps, DJ, Keyboards, Pro-Audio and more. Most orders ship free!",
+   "htmlSnippet": "\u003cb\u003eGuitar\u003c/b\u003e Center is the world&#39;s largest musical instruments retailer. Shop \u003cb\u003eGuitars\u003c/b\u003e, \u003cbr\u003e\nBass, Drums, Amps, DJ, Keyboards, Pro-Audio and more. Most orders ship free!",
+   "cacheId": "KT2uqE99cp4J",
+   "formattedUrl": "www.guitarcenter.com/",
+   "htmlFormattedUrl": "www.\u003cb\u003eguitar\u003c/b\u003ecenter.com/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "365",
+      "height": "138",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRni9YBuuzEWm8An7ehTVJwEUn2UgmntiMUWf8Tnrz4BZP3G3jC-dhwOHIb"
+     }
+    ],
+    "website": [
+     {
+      "url": "//www.guitarcenter.com/"
+     }
+    ],
+    "metatags": [
+     {
+      "pagetemplate": "/home/",
+      "msvalidate.01": "69A39B83C6C04109D804B2032FFB856B",
+      "y_key": "f1dda75749288e44",
+      "format-detection": "telephone=no",
+      "viewport": "width=976"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://static.guitarcenter.com/static/gc/selects/2017/d-home/gc-md-hs-tips-and-tricks-05-05-17.jpg"
+     }
+    ],
+    "searchaction": [
+     {
+      "target": "//www.guitarcenter.com/search?Ntt={search_string}",
+      "query-input": "name=search_string required"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Guitar - Wikipedia",
+   "htmlTitle": "\u003cb\u003eGuitar\u003c/b\u003e - Wikipedia",
+   "link": "https://en.wikipedia.org/wiki/Guitar",
+   "displayLink": "en.wikipedia.org",
+   "snippet": "The guitar is a musical instrument classified as a fretted string instrument with \nanywhere from four to 18 strings, usually having six. The sound is projected \neither ...",
+   "htmlSnippet": "The \u003cb\u003eguitar\u003c/b\u003e is a musical instrument classified as a fretted string instrument with \u003cbr\u003e\nanywhere from four to 18 strings, usually having six. The sound is projected \u003cbr\u003e\neither&nbsp;...",
+   "cacheId": "kJ6fCtaqqogJ",
+   "formattedUrl": "https://en.wikipedia.org/wiki/Guitar",
+   "htmlFormattedUrl": "https://en.wikipedia.org/wiki/\u003cb\u003eGuitar\u003c/b\u003e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "175",
+      "height": "287",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR9GDN485L6xcoC_WbMCtXO7TIQNOIy7VzdYMzqEH7ZKf-K6dOr0tYpBUEV"
+     }
+    ],
+    "metatags": [
+     {
+      "referrer": "origin-when-cross-origin",
+      "og:image": "https://upload.wikimedia.org/wikipedia/commons/4/45/GuitareClassique5.png"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/4/45/GuitareClassique5.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Shop Amazon.com | Guitars",
+   "htmlTitle": "Shop Amazon.com | \u003cb\u003eGuitars\u003c/b\u003e",
+   "link": "https://www.amazon.com/Guitars-Basses-Stringed-Instruments-Products/b?ie=UTF8&node=11971241",
+   "displayLink": "www.amazon.com",
+   "snippet": "Looking for Guitars? Amazon.com has a wide selection at great prices.",
+   "htmlSnippet": "Looking for \u003cb\u003eGuitars\u003c/b\u003e? Amazon.com has a wide selection at great prices.",
+   "cacheId": "rdoeKcQKKB8J",
+   "formattedUrl": "https://www.amazon.com/Guitars-Basses-Stringed.../b?ie=UTF8...",
+   "htmlFormattedUrl": "https://www.amazon.com/\u003cb\u003eGuitars\u003c/b\u003e-Basses-Stringed.../b?ie=UTF8...",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "374",
+      "height": "135",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQWZm__GwTetPgSWEpPOGA3D_1sK5T7TVVumZp_Y8m4NA8HCgO-NOsD8U"
+     }
+    ],
+    "metatags": [
+     {
+      "og:title": "Shop Amazon.com | Guitars",
+      "twitter:title": "Shop Amazon.com | Guitars",
+      "og:description": "Looking for Guitars? Amazon.com has a wide selection at great prices.",
+      "twitter:description": "Looking for Guitars? Amazon.com has a wide selection at great prices."
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://images-na.ssl-images-amazon.com/images/G/01/img16/musical-instruments/vertical-store/guitars/Yamaha_Pacifica_Guitar_Hero._CB530542148_.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Guitar World",
+   "htmlTitle": "\u003cb\u003eGuitar\u003c/b\u003e World",
+   "link": "http://www.guitarworld.com/",
+   "displayLink": "www.guitarworld.com",
+   "snippet": "The online destination for guitarists featuring artist news, lessons, gear reviews, \nalbum news, music videos, photos, transcriptions, lists and more.",
+   "htmlSnippet": "The online destination for guitarists featuring artist news, lessons, gear reviews, \u003cbr\u003e\nalbum news, music videos, photos, transcriptions, lists and more.",
+   "cacheId": "GeH1kgV4A9UJ",
+   "formattedUrl": "www.guitarworld.com/",
+   "htmlFormattedUrl": "www.\u003cb\u003eguitar\u003c/b\u003eworld.com/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "301",
+      "height": "168",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR62B4yVQvHW-2FyNonIcMbiu6pdFtBePzNelbv3PW0gKhoTGqxzpxZ8dKQ"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1",
+      "fb:app_id": "188272271194505",
+      "og:site_name": "Guitar World",
+      "og:type": "website",
+      "og:url": "http://www.guitarworld.com/",
+      "og:title": "Guitar World",
+      "og:description": "The online destination for guitarists featuring artist news, lessons, gear reviews, album news, music videos, photos, transcriptions, lists and more."
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://www.guitarworld.com/sites/default/files/public/styles/featured_homepage_slider/public/homepage-featured-image/Getty950Images-611050002.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Guitar Pro 7 - Sheet music editor software for guitar, bass, and other ...",
+   "htmlTitle": "\u003cb\u003eGuitar\u003c/b\u003e Pro 7 - Sheet music editor software for \u003cb\u003eguitar\u003c/b\u003e, bass, and other ...",
+   "link": "https://www.guitar-pro.com/",
+   "displayLink": "www.guitar-pro.com",
+   "snippet": "Guitar Pro 7 is a tablature editor software for guitar, bass, and other fretted \ninstruments. Equipped with a powerful audio engine, it makes writing music \neasier, ...",
+   "htmlSnippet": "\u003cb\u003eGuitar\u003c/b\u003e Pro 7 is a tablature editor software for \u003cb\u003eguitar\u003c/b\u003e, bass, and other fretted \u003cbr\u003e\ninstruments. Equipped with a powerful audio engine, it makes writing music \u003cbr\u003e\neasier,&nbsp;...",
+   "cacheId": "LnU1imQUL7AJ",
+   "formattedUrl": "https://www.guitar-pro.com/",
+   "htmlFormattedUrl": "https://www.\u003cb\u003eguitar\u003c/b\u003e-pro.com/",
+   "pagemap": {
+    "offer": [
+     {
+      "pricecurrency": "USD",
+      "price": "75"
+     },
+     {
+      "pricecurrency": "EUR",
+      "price": "75"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "267",
+      "height": "189",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQGXFXS66-1fT0QsUzyGdHvrx4qKSURV_PIYi_-u8mmHx7GML7W-j8AoSQ"
+     }
+    ],
+    "product": [
+     {
+      "name": "Guitar Pro 7",
+      "description": "Wide-ranging new features and enhancements, for creating, playing, and sharing your tabs!",
+      "url": "https://www.guitar-pro.com/index.php?pg=guitar-pro-whats-new"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0",
+      "apple-mobile-web-app-title": "Guitar Pro",
+      "application-name": "Guitar Pro",
+      "msapplication-tilecolor": "#2d89ef",
+      "msapplication-tileimage": "//assets.guitar-pro.com/1.3/favicons/mstile-144x144.png?v=1.3",
+      "msapplication-config": "//assets.guitar-pro.com/1.3/favicons/browserconfig.xml?v=1.3",
+      "theme-color": "#ffffff",
+      "author": "Arobas Music",
+      "publisher": "Arobas Music",
+      "og:title": "Guitar Pro 7 - Sheet music editor software for guitar, bass, and other fretted instruments",
+      "og:description": "Guitar Pro 7 is a tablature editor software for guitar, bass, and other fretted instruments. Equipped with a powerful audio engine, it makes writing music easier, and it constitutes an essential tool for guitarists.",
+      "fb:app_id": "1442239092742075",
+      "og:type": "website",
+      "og:url": "https://www.guitar-pro.com/en/index.php&Array",
+      "og:image": "https://assets.guitar-pro.com/1.3/images/www/home/gp7-splash-interface.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@ArobasMusic",
+      "twitter:creator": "@ArobasMusic",
+      "twitter:title": "Guitar Pro 7 - Sheet music editor software for guitar, bass, and other fretted instruments",
+      "twitter:description": "Guitar Pro 7 is a tablature editor software for guitar, bass, and other fretted instruments. Equipped with a powerful audio engine, it makes writing music easier, and it constitutes an essential tool for guitarists.",
+      "twitter:image": "https://assets.guitar-pro.com/1.3/images/www/home/gp7-splash-interface.jpg",
+      "cart-csrf-token": "6GO8Hud2lyM8VEI5KGV0jAjqbULC3oj0UYYri2kuqWtbr161xSSHj1XkMzMFNWvy"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://assets.guitar-pro.com/1.3/images/www/home/gp7-splash-interface.jpg"
+     }
+    ],
+    "hproduct": [
+     {
+      "description": "Wide-ranging new features and enhancements, for creating, playing, and sharing your tabs!",
+      "fn": "Guitar Pro 7",
+      "url": "https://www.guitar-pro.com/index.php?pg=guitar-pro-whats-new",
+      "currency": "USD",
+      "currency_iso4217": "840"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "ULTIMATE GUITAR TABS. 1,100,000 songs catalog with free ...",
+   "htmlTitle": "ULTIMATE \u003cb\u003eGUITAR\u003c/b\u003e TABS. 1,100,000 songs catalog with free ...",
+   "link": "https://www.ultimate-guitar.com/",
+   "displayLink": "www.ultimate-guitar.com",
+   "snippet": "8 hours ago ... Your #1 source for chords, guitar tabs, bass tabs, ukulele chords, guitar pro and \npower tabs. Comprehensive tabs archive with over 1100000 ...",
+   "htmlSnippet": "8 hours ago \u003cb\u003e...\u003c/b\u003e Your #1 source for chords, \u003cb\u003eguitar\u003c/b\u003e tabs, bass tabs, ukulele chords, \u003cb\u003eguitar\u003c/b\u003e pro and \u003cbr\u003e\npower tabs. Comprehensive tabs archive with over 1100000&nbsp;...",
+   "cacheId": "EZeeF_poKuYJ",
+   "formattedUrl": "https://www.ultimate-guitar.com/",
+   "htmlFormattedUrl": "https://www.ultimate-\u003cb\u003eguitar\u003c/b\u003e.com/",
+   "pagemap": {
+    "metatags": [
+     {
+      "fb:app_id": "539490962762175",
+      "viewport": "width=1280, minimum-scale=0.1, maximum-scale=2.0",
+      "theme-color": "#000000",
+      "application-name": "Ultimate Guitar",
+      "msapplication-tilecolor": "#f2f2f2",
+      "msapplication-tileimage": "//cdn.ustatik.com/_img/bootstrap/ug/img/touchicons/mediumtile.png",
+      "csrf-param": "_csrf",
+      "csrf-token": "RmxieW5pbGkpMyEOXFENPnE5Jy8LUCQkChgSTQQOKyoKJCwOGi4hGw=="
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Guitars | Musician's Friend",
+   "htmlTitle": "\u003cb\u003eGuitars\u003c/b\u003e | Musician&#39;s Friend",
+   "link": "http://www.musiciansfriend.com/guitars",
+   "displayLink": "www.musiciansfriend.com",
+   "snippet": "Matches 1 - 40 of 4214 ... Get the guaranteed lowest prices, largest selection and free shipping on most \nGuitars at Musician's Friend.",
+   "htmlSnippet": "Matches 1 - 40 of 4214 \u003cb\u003e...\u003c/b\u003e Get the guaranteed lowest prices, largest selection and free shipping on most \u003cbr\u003e\n\u003cb\u003eGuitars\u003c/b\u003e at Musician&#39;s Friend.",
+   "cacheId": "7M61T5igE4cJ",
+   "formattedUrl": "www.musiciansfriend.com/guitars",
+   "htmlFormattedUrl": "www.musiciansfriend.com/\u003cb\u003eguitars\u003c/b\u003e",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "252",
+      "height": "115",
+      "src": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSsB5CZDi7MQNGN5R5jbd85lS_ezXA6H4u0OdAhOC8cG8aCaC7iSfba3p4"
+     }
+    ],
+    "metatags": [
+     {
+      "pagetemplate": "department",
+      "format-detection": "telephone=no",
+      "msapplication-tilecolor": "#da532c",
+      "msapplication-tileimage": "http://static.musiciansfriend.com/img/brand/mobile-mf/mstile-144x144.png",
+      "theme-color": "#ffffff"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "http://static.musiciansfriend.com/static/mf/guided-navigation/guitars/all-guitars/MF-MD-MG-acoustic-guitars-gn-20160309-v1.jpg"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Guitars | Sweetwater",
+   "htmlTitle": "\u003cb\u003eGuitars\u003c/b\u003e | Sweetwater",
+   "link": "https://www.sweetwater.com/shop/guitars/",
+   "displayLink": "www.sweetwater.com",
+   "snippet": "Only at Sweetwater! ✓ 0% Financing, ✓ FREE Shipping, and ✓ FREE Tech \nSupport for Guitars!",
+   "htmlSnippet": "Only at Sweetwater! ✓ 0% Financing, ✓ FREE Shipping, and ✓ FREE Tech \u003cbr\u003e\nSupport for \u003cb\u003eGuitars\u003c/b\u003e!",
+   "cacheId": "Wz3Bx0OIyskJ",
+   "formattedUrl": "https://www.sweetwater.com/shop/guitars/",
+   "htmlFormattedUrl": "https://www.sweetwater.com/shop/\u003cb\u003eguitars\u003c/b\u003e/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "440",
+      "height": "114",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0NQQdz4FP78WxL6CukDt1ZdOO2IcL2ebPMbmsWCWa-rqGLo9Zik4GB34"
+     }
+    ],
+    "metatags": [
+     {
+      "skype_toolbar": "SKYPE_TOOLBAR_PARSER_COMPATIBLE"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://media.sweetwater.com/shop/images/logo-gg.png"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Guitar Pro 7 | How to buy a license, an upgrade",
+   "htmlTitle": "\u003cb\u003eGuitar\u003c/b\u003e Pro 7 | How to buy a license, an upgrade",
+   "link": "https://www.guitar-pro.com/en/index.php?pg=buy-guitar-pro",
+   "displayLink": "www.guitar-pro.com",
+   "snippet": "Buy a Guitar Pro licence or upgrade to Guitar Pro 7 on our website.",
+   "htmlSnippet": "Buy a \u003cb\u003eGuitar\u003c/b\u003e Pro licence or upgrade to \u003cb\u003eGuitar\u003c/b\u003e Pro 7 on our website.",
+   "cacheId": "1TYBsazTokUJ",
+   "formattedUrl": "https://www.guitar-pro.com/en/index.php?pg=buy-guitar-pro",
+   "htmlFormattedUrl": "https://www.\u003cb\u003eguitar\u003c/b\u003e-pro.com/en/index.php?pg=buy-\u003cb\u003eguitar\u003c/b\u003e-pro",
+   "pagemap": {
+    "offer": [
+     {
+      "pricecurrency": "USD",
+      "price": "75"
+     },
+     {
+      "pricecurrency": "EUR",
+      "price": "75"
+     },
+     {
+      "pricecurrency": "USD",
+      "price": "30"
+     },
+     {
+      "pricecurrency": "EUR",
+      "price": "30"
+     }
+    ],
+    "cse_thumbnail": [
+     {
+      "width": "267",
+      "height": "189",
+      "src": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQGXFXS66-1fT0QsUzyGdHvrx4qKSURV_PIYi_-u8mmHx7GML7W-j8AoSQ"
+     }
+    ],
+    "product": [
+     {
+      "url": "index.php?pg=guitar-pro",
+      "name": "Guitar Pro 7",
+      "description": "The complete guitar software for writing and playing tablature or standard score."
+     },
+     {
+      "name": "Upgrade",
+      "description": "The complete guitar software for writing and playing tablature or standard score."
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0",
+      "apple-mobile-web-app-title": "Guitar Pro",
+      "application-name": "Guitar Pro",
+      "msapplication-tilecolor": "#2d89ef",
+      "msapplication-tileimage": "//assets.guitar-pro.com/1.3/favicons/mstile-144x144.png?v=1.3",
+      "msapplication-config": "//assets.guitar-pro.com/1.3/favicons/browserconfig.xml?v=1.3",
+      "theme-color": "#ffffff",
+      "author": "Arobas Music",
+      "publisher": "Arobas Music",
+      "og:title": "Guitar Pro 7 | How to buy a license, an upgrade",
+      "og:description": "Buy a Guitar Pro licence or upgrade to Guitar Pro 7 on our website.",
+      "fb:app_id": "1442239092742075",
+      "og:type": "website",
+      "og:url": "https://www.guitar-pro.com/en/index.php?pg=buy-guitar-pro&Array",
+      "og:image": "https://assets.guitar-pro.com/1.3/images/www/home/gp7-splash-interface.jpg",
+      "twitter:card": "summary_large_image",
+      "twitter:site": "@ArobasMusic",
+      "twitter:creator": "@ArobasMusic",
+      "twitter:title": "Guitar Pro 7 | How to buy a license, an upgrade",
+      "twitter:description": "Buy a Guitar Pro licence or upgrade to Guitar Pro 7 on our website.",
+      "twitter:image": "https://assets.guitar-pro.com/1.3/images/www/home/gp7-splash-interface.jpg",
+      "cart-csrf-token": "sZ6XUIrkEm6B4YCIJbmr8HMK8nAQ7cDq2AeN9vYDIV5DJybjAnAyVd9TqAAnD4Ew"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://assets.guitar-pro.com/1.3/images/www/home/gp7-splash-interface.jpg"
+     }
+    ],
+    "hproduct": [
+     {
+      "description": "The complete guitar software for writing and playing tablature or standard score.",
+      "fn": "Guitar Pro 7",
+      "url": "https://www.guitar-pro.com/en/index.php?pg=guitar-pro",
+      "currency": "USD",
+      "currency_iso4217": "840"
+     },
+     {
+      "description": "The complete guitar software for writing and playing tablature or standard score.",
+      "fn": "Upgrade",
+      "currency": "USD",
+      "currency_iso4217": "840"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "customsearch#result",
+   "title": "Guitar.com",
+   "htmlTitle": "\u003cb\u003eGuitar\u003c/b\u003e.com",
+   "link": "https://www.guitar.com/",
+   "displayLink": "www.guitar.com",
+   "snippet": "NewsEddie Van Halen Gives 75 Guitars To School Kids · InterviewsChris Cornell\n: A Changed Man · NewsVideo: Warrant Release New Album: Louder Harder ...",
+   "htmlSnippet": "NewsEddie Van Halen Gives 75 \u003cb\u003eGuitars\u003c/b\u003e To School Kids &middot; InterviewsChris Cornell\u003cbr\u003e\n: A Changed Man &middot; NewsVideo: Warrant Release New Album: Louder Harder&nbsp;...",
+   "cacheId": "mY-riB5SNtIJ",
+   "formattedUrl": "https://www.guitar.com/",
+   "htmlFormattedUrl": "https://www.\u003cb\u003eguitar\u003c/b\u003e.com/",
+   "pagemap": {
+    "cse_thumbnail": [
+     {
+      "width": "318",
+      "height": "159",
+      "src": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRTlK5x0xGbwWodDOqWprW70MXBVVKObJj-vLkdkEegKS5j51AmMEGX0bud"
+     }
+    ],
+    "metatags": [
+     {
+      "viewport": "width=device-width, initial-scale=1"
+     }
+    ],
+    "cse_image": [
+     {
+      "src": "https://www.guitar.com/sites/guitar.com/files/styles/featured/public/warrantint.jpg"
+     }
+    ]
+   }
+  }
+ ]
+}

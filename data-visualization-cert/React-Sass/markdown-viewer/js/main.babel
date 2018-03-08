@@ -1,0 +1,61 @@
+const preText = "# header 1 tag\n## header 2 tag ...\n###### header 6 tag\n\n" +
+          "*italics*  _underscores_  **bold** or __bold__  ~~strike-through~~\n\n" +
+          "1. Orderded list item one\n2. Orderded list item two\n3. Orderded list item three\n\n" +
+          "* Unorderded list item\n* Unorderded list item\n* Unorderded list item\n\n" +
+          "[anchor link](https://www.google.com)\n\n" +
+          "Inline `code` has `back-ticks around` it.\n\n" +
+          "```\nfunction codeBlock(args) {\n  if (!wantMessyCodeBlocks) {\n" +
+          "    useTripleBackTicksYouShould();\n }\n}\n```";
+
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      markdown: preText
+    }
+  }
+
+  handleChange(e) {
+    this.setState({markdown: e.target.value});
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12"><h1 className="center title">Kevin's fCC Markup Previewer Project</h1></div>
+        </div>
+        <br/>
+        <div className="row">
+          <div className="col-md-6"><h3 className="center title">Markdown</h3></div>
+          <div className="col-md-6"><h3 className="center title">Preview</h3></div>
+        </div>
+
+        <div className="row">
+          <div className="col-md-6">
+            <textarea placeholder="Enter some markdown text." onChange={this.handleChange.bind(this)} value={this.state.markdown} rows="30" style={{width: "100%"}}/>
+          </div>
+          <div className="col-md-6">
+            <div dangerouslySetInnerHTML={{__html: marked(this.state.markdown)}}></div>
+          </div>
+        </div>
+        <br/>
+        <div className="row">
+          <div className="col-md-12">
+            <h5 className="center title">
+              <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Want to learn more about Git flavored markdown?</a>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+    ); // return
+  } // render
+} // class App
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);

@@ -1,0 +1,121 @@
+
+body {
+	
+	background-color:#FFE8C1;
+	background-image: linear-gradient(30deg, #FFD690 12%, transparent 12.5%, transparent 87%, #FFD690 87.5%, #FFD690),
+	linear-gradient(150deg, #FFD690 12%, transparent 12.5%, transparent 87%, #FFD690 87.5%, #FFD690),
+	linear-gradient(30deg, #FFD690 12%, transparent 12.5%, transparent 87%, #FFD690 87.5%, #FFD690),
+	linear-gradient(150deg, #FFD690 12%, transparent 12.5%, transparent 87%, #FFD690 87.5%, #FFD690),
+	linear-gradient(60deg, #FFF6E5 25%, transparent 25.5%, transparent 75%, #FFF6E5 75%, #FFF6E5), 
+	linear-gradient(60deg, #FFF6E5 25%, transparent 25.5%, transparent 75%, #FFF6E5 75%, #FFF6E5);
+	background-size:80px 140px;
+	background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+
+	font-family: 'Passion One', cursive;
+	
+	padding: 2em;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+
+a {
+  color:inherit;
+  text-decoration: none;
+ }
+ 
+.row {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+}
+
+.data {
+	height: 40px;
+}
+
+.online {
+	color: green;
+}
+
+.dead {
+	color: red;
+}
+
+.col {
+	text-align: center;
+}
+
+.table-head {
+	background-color: darkblue;
+	color: white;
+	font-size: 125%;
+	margin-bottom: 1em;
+	border-radius: 3px;
+}
+
+
+#title-area {
+	text-align: center;
+	font-size: 300%;
+	color: black;
+}
+
+#fcc-status {
+	text-align: center;
+	font-size: 200%;
+
+}
+
+#radioBtn .notActive{
+    color: darkblue;
+    background-color: #fff;
+		text-align: center;
+}
+#radioBtn .active{
+    color: white;
+    background-color: darkblue;
+		text-align: center;
+}
+#radioBtn .btn-sm {
+	border-style: solid;
+	border-color: darkblue;
+}
+
+#radioBtn .btn-left {
+	border-radius: 6px 0px 0px 6px;
+}
+#radioBtn .btn-center {
+	border-radius: 0px;
+}
+#radioBtn .btn-right {
+	border-radius: 0px 6px 6px 0px;
+}
+
+.input-group {
+	text-align: center;
+	display: inline-block;
+	float: none;
+}
+
+.online {
+	display: block;
+}
+.offline {
+	display: block;	
+}
+.dead {
+	display: block;	
+}
+
+#twitchLogo {
+	margin-right: 250px;
+	margin-left: -322px;
+}
+
+img.wrap {
+	float: right;
+}
+

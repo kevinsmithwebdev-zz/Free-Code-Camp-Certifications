@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+
+
+body {
+  background-color: #FFEEED;
+  margin: 25px;
+  border: 25px;
+  padding: 25px;
+  font-family: 'Merriweather', serif;
+
+}
+
+
+
+.myBox {
+  padding: 10px;
+  font-size: 200%;
+}
+
+#fullBox {
+  background-color: #ADDFAD;
+  border-radius: 20px;
+}
+
+#titleArea {
+  font-weight: bold;
+  font-size: 300%;
+  text-align: center;
+}
+
+.imperial {
+  display: inline;
+}
+
+.metric {
+  display: none;
+}
+
+#convertBTN {
+  border-radius: 20px;
+  margin: 15px;
+}

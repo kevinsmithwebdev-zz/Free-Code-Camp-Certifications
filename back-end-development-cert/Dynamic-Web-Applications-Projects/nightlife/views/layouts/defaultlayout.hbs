@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>{{appInfo.titleLong}}</title>
+  <link rel="stylesheet" href="/css/bootstrap.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          {{#if user}}
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/auth/logout">Logout</a></li>
+          {{/if}}
+          <li role="presentation"><a href="/about">About</a></li>
+        </ul>
+      </nav>
+      <h3>{{{appInfo.title}}} - Carpe Noctum!<br>
+      <span class='welcome-line'>
+        {{#if user}}
+          Welcome, {{user.name}}!
+        {{else}}
+          not logged in
+        {{/if}}
+      </span>
+      </h3>
+    </div>  <!-- header -->
+    <br>
+    {{{body}}}
+
+    <footer class="footer">{{{appInfo.footer}}}</footer>
+
+  </div> <!-- /container -->
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+</script>

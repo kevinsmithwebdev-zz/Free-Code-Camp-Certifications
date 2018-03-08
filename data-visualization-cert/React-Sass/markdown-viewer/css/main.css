@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Anton|Open+Sans);
+body {
+  font-family: "Open Sans", serif;
+  margin: 10px;
+}
+
+textarea {
+  font-family: "Open Sans", serif;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.center {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+}
+
+hr {
+  width: 3px;
+}
+
+.title {
+  font-family: "Anton", sans-serif;
+}
