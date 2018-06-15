@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>FCC RWD Survey</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<h1 id="title">Best Ice Cream</h1>
+
+<p id="description">A poll on the best way to eat ice cream.</p>
+
+<form id="survey-form">
+  
+<!-- NAME -->
+  
+  <div class="survey-row">
+    <label id="name-label" for="name">Name:</label>
+    <input required type="text" name="name" id="name" placeholder="Jane Smith">
+  </div>
+  
+<!-- EMAIL -->
+  
+  <div class="survey-row">
+    <label id="email-label" for="email">Email:</label>
+    <input required type="email" name="email" id="email" placeholder="me@email.com">
+  </div>
+
+  <br />
+  
+<!-- SCOOPS -->
+  
+  <div class="survey-row">
+    <label id="number-label" for="number">Number of scoops:</label>
+    <input type="number" name="number" id="number" min=1 max=10 placeholder="3">
+  </div>
+  
+<!-- FLAVOR -->
+  
+  <div class="survey-row">
+    <label id="dropdown-label" for="dropdown">Flavor:</label>
+    <select id="dropdown">
+      <option disabled selected value> -- select a flavor -- </option>
+      <option value="chocolate">chocolate</option>
+      <option value="vanilla">vanilla</option>
+      <option value="strawberry">strawberry</option>
+      <option value="rocky road">rocky road</option>
+      <option value="spumoni">spumoni</option>
+    </select>
+  </div>
+  
+<!-- DELIVERY -->
+  
+  <div class="survey-row">
+    <label id="radio-label" for="delivery">Delivery:</label>
+    <div id="delivery">
+      <span><input type="radio" id="cone" name="delivery" value="cone" checked><label for="cone">cone</label></span>
+      <span><input type="radio" id="bowl" name="delivery" value="bowl"><label for="bowl">bowl</label></span>
+    </div>
+  </div>
+  
+<!-- TOPPINGS -->
+  
+  <div class="survey-row">
+    <label id="checkbox-label" for="toppings">Toppings:</label>
+    <ul id="toppings">
+
+      <li>
+        <label for="chocolate-sauce"><input type="checkbox" id="chocolate-sauce" name="toppings" value="chocolate-sauce">chocolate sauce</label>
+      </li>
+      <li>
+        <label for="sprinkles"><input type="checkbox" id="sprinkles" name="toppings" value="sprinkles">sprinkles</label>
+      </li>
+      <li>
+        <label for="whipped cream"><input type="checkbox" id="whipped cream" name="toppings" value="whipped cream">whipped cream</label>
+      </li>
+      <li>
+        <label for="nuts"><input type="checkbox" id="nuts" name="toppings" value="nuts">nuts</label>
+      </li>
+      <li>
+        <label for="cherry"><input type="checkbox" id="cherry" name="toppings" value="cherry">cherry</label>
+      </li>
+    </ul>
+  </div>
+
+  <br />
+  
+<!-- COMMENT -->
+  
+  <div class="survey-row">
+    <label id="comment-label" for="comment">Comments:</label>
+    <textarea required name="comment" id="comment" placeholder="Why I love ice cream..." rows="3" cols="52" maxlen="200"></textarea>
+  </div>
+  
+  <br />
+  
+<!-- SUBMIT BUTTON -->
+  <input id="submit" type="submit" value="Submit">
+</form>
+  
+  
+
+</body>
+
+</html>

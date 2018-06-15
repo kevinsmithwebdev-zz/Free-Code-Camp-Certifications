@@ -1,0 +1,75 @@
+body::after {
+  content: "";
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZi9jO8e56wG0GAnV6P-VF2sZFkITVGP--ZubcZGwG4i36PDnMjQ");
+  background-size: cover;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+}
+
+#title {
+  font-size: 200%;
+  text-align: center;
+}
+#description {
+  font-size: 150%;
+  text-align: center;
+}
+
+#survey-form {
+  text-align: center;
+}
+.survey-row {
+  display: flex;
+  justify-content: center;
+  margin: .5em .25em;
+  border-rad
+}
+
+
+.survey-row > label {
+  width: 10%;
+  min-width: 5em; 
+  max-width: 20em; 
+  text-align: right;
+  margin-right: .25em;
+}
+#name, #email, #number, #dropdown, #delivery, #toppings, #comment {
+  width: 10%;
+  min-width: 5em; 
+  max-width: 20em; 
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+
+.survey-row input {
+  margin-left: .25em;
+}  
+
+/************/
+#delivery {
+  display: flex;
+  flex-wrap: wrap;
+}
+#toppings li {
+  width: 100%;
+  text-align: left;
+}
+#toppings li label, input[type="radio"], input[type="checkbox"] {
+  margin-right: .5em;
+}
+
+#submit {
+  font-size: 150%;
+  background-color: green;
+  color: white;
+}
+
+
+
