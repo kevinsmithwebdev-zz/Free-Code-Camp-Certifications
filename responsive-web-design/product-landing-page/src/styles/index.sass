@@ -1,0 +1,157 @@
+$navBG: wheat
+$linkFG: blue
+$linkActiveBG: $linkFG
+$linkActiveFG: $navBG
+
+$brandFG1: blue
+$brandFG2: red
+$brandFG3: green
+$brandFG4: orange
+
+$bodyBG: antiquewhite
+
+.topnav
+  background-color: $navBG
+  overflow: hidden
+  position: fixed
+  top: 0
+  width: 65%
+
+.topnav a
+  float: left
+  color: $linkFG
+  padding: 14px 5px
+  text-decoration: none
+  font-size: 17px
+
+.topnav a:hover
+  background-color: $linkActiveBG
+  color: $linkActiveFG
+
+.topnav a.active
+  background-color: #4caf50
+  color: white
+
+.topnav-right
+  float: right
+
+.topnav-left
+  float: left
+
+@media (max-width: 950px)
+  .topnav
+    width: 95%
+    text-align: center
+  .topnav-right
+    float: none
+
+  .topnav-left
+    float: none
+
+/*************/
+
+#brand-box
+  display: flex
+  overflow: hidden
+
+#header-img
+  width: 50px
+  height: 50px
+  margin: 2px 50px 0 0
+  position: absolute
+
+#header-brand
+  font-size: 250%
+  margin-left: 50px
+
+#header-brand .c1
+  color: $brandFG1
+
+#header-brand .c2
+  color: $brandFG2
+
+#header-brand .c3
+  color: $brandFG3
+header
+  text-align: center
+
+@media (max-width: 950px)
+  header
+    border: 1px solid green
+    text-align: center
+
+/*************/
+
+body
+  background-color: $bodyBG
+  width: 65%
+  margin: auto
+
+main
+  padding-top: 50px
+
+@media (max-width: 950px)
+  main
+    padding-top: 80px
+  body
+    width: 95%
+
+
+section
+  padding: 40px 10px 5px 10px
+figure
+  text-align: center
+#title
+  text-align: center
+
+/*************/
+
+#testimonials
+  .testimonial
+    background-color: $bodyBG - #111
+    padding: .5em
+    border-radius: .5em
+    font-size: 125%
+  .testimonial:nth-child(odd)
+    margin: 1em 2em 1em 10em
+  .testimonial:nth-child(even)
+    margin: 1em 10em 1em 2em
+  .signature
+    font-style: italic
+    margin: .5em 0 0 2em
+  .signature::before
+    content: "- "
+
+@media (max-width: 950px)
+  .testimonial
+    margin: .5em 0 !important
+
+/*************/
+
+#pricing
+  .price-wrapper
+    display: flex
+    flex-wrap: wrap
+  .bb-item
+    height: 200px
+    width: 200px
+    text-align: center
+    background-color: $bodyBG - #222
+    margin: .5em
+    padding: .5em
+    border-radius: 3%
+  .bb-title
+    font-weight: bold
+    font-size: 150%
+  .bb-image
+    width: auto
+    height: 100px
+    border-radius: 10%
+  .bb-price
+    font-weight: bold
+    padding-top: .25em
+
+/*************/
+
+#info
+  text-align: center
