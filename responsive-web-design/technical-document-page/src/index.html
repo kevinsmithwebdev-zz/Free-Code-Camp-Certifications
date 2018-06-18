@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>webpack starterkit</title>
+</head>
+<body>
+  <nav id="navbar">
+    <header><h1>Pizza</h1></header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+      <li><a class="nav-link" href="#History">History</a></li>
+      <li><a class="nav-link" href="#Construction">Construction</a></li>
+      <li><a class="nav-link" href="#Varieties">Varieties</a></li>
+      <li><a class="nav-link" href="#Usage">Usage</a></li>
+      <li><a class="nav-link" href="#Pricing_and_Purchasing">Pricing and Purchasing</a></li>
+      <li><a class="nav-link" href="#Coding">Coding</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+
+    <section id="Introduction" class="main-section">
+      <header>Introduction</header>
+      <p>Pizza is delicious food, known the world over. The author in particular often referst to it as "nature's perfect food".</p>
+    </section>
+
+    <section id="History" class="main-section">
+      <header>History</header>
+      <p>Pizza is of Italian origin but many cultures have their own versions. The US in particular has severa varieties.</p>
+      <p>The first mentions of "pizza" appeared in Latin in the Italian town of Gaeta in 997CE.</p>
+      <p>Several origins of the word have been suggested:</p>
+      <ul>
+        <li>Byzantine Greek and Late Latin <i>pitta > pizza</i>, a round flat bread baked in the oven at high temperature sometimes with toppings.</li>
+        <li>Byzantine Greek and Late Latin <i>pitta > pizza</i>, a round flat bread baked in the oven at high temperature sometimes with toppings.</li>
+        <li>The Lombardic word <i>bizzo</i> or <i>pizzo</i> meaning "mouthful"</li>
+      </ul>
+      <p>Personally, I don't know from what langauge it comes, but I assume it translate as "tasty".</p>
+    </section>
+
+    <section id="Construction" class="main-section">
+      <header>Construction</header>
+      <p>At a most basic level, a pizza can simply be a flatbread with a topping, often a sauce (typically tomato) and some cheese (typically mozzerella mixed with a little parmesean). Other common toppings can include:</p>
+      <ul>
+        <li>pepperoni (the best topping, imho)</li>
+        <li>sausage</li>
+        <li>onions</li>
+        <li>mushrooms</li>
+        <li>olives</li>
+        <li>bell peppers</li>
+        <li>ham and pineapple</li>
+      </ul>
+      <p>This is then cooked in some kind of an oven, stereotypically a slate oven, until the crust is cooked and the cheese has melted.</p>
+    </section>
+
+    <section id="Varieties" class="main-section">
+      <header>Varieties</header>
+      <p>Pizza comes in several varieties. Some of the most common are:</p>
+      <ul>
+        <li><span class="usage-li-title">Neapolitan</span>The most original of pizzas, often with just a thin crust, tomato sauce, clumps of mozzarella, and some basil leaves.</li>
+        <li><span class="usage-li-title">Sicilian</span>It typically has a thicker crust.</li>
+        <li><span class="usage-li-title">New York</span>For many Americans, this is the "most" authentic pizza. It is thinner with a hand tossed crust. The best is the original American pizza, from Lombardi's in Little Italy at the corner of Spring and Mott. You wouldn't think the coal in the ovens would improve the taste, but it really does.</li>
+        <li><span class="usage-li-title">Chicago</span>People debate whether or not this is a real pizza. It is massively thick (as much as 2" or 5cm), and often "upside-down". In a deep pan, a crust is put down, then toppings, then cheese. A thin layer of crust is often added, then another layer of sauce.</li>
+        <li><span class="usage-li-title">California</span>I don't know, some free range artisen sausage and artichokes or avacodos or some other stupid crap.</li>
+      </ul>
+    </section>
+
+    <section id="Usage" class="main-section">
+      <header>Usage</header>
+      <p>People tend to overcomplicate this. Just put it in your mouth. If it is a thick style, then a fork and knife are appropriate. If it is a thin style, then the hands are best - you can try a fork and knife but you will probably get beaten up and have your lunch money stolen. Chopsticks are never appropriate.</p>
+    </section>
+
+    <section id="Pricing_and_Purchasing" class="main-section">
+      <header>Pricing and Purchasing</header>
+      <p>Pricing would seem like a straight forward subject. But since many pizzas are sold in a circular shape, size comparison should be difficult. For example, a 12" pizza is not twice as much pizza as a 6", but 4 times as much.</p>
+      <p>In general, most pizza stores (or "parlors" in the lingo of the trade) will post prices in a menu or on a reader board. Pay it. Really, it's that simple. You should be embarrased that you read this part.</p>
+    </section>
+
+    <section id="Coding" class="main-section">
+      <header>Coding</header>
+      <p>Pizza and coding is an all too often neglected topic. I propose implementation of a coding standards with which to create pizza. Since, according to Atwood's Law, "Any application that can be written in JavaScript, will eventually be written in JavaScript.", we will work with that.</p>
+      <p>The first job is to invoke an instance pizza:</p>
+      <code>
+        let newOrder = new Pizza();
+      </code>
+      <p>The default style, out of respect for it's origins, should be "neapolitan". All others can be passed as a parameter to the constructor, e.g.:</p>
+      <code>
+        let newOrder = new Pizza("chicago");
+      </code>
+      <p>A pizza will assume a flour crust, tomato sauce, and mozzarella cheese. Everything else must be added, e.g.:</p>
+      <code>
+        let newOrder = new Pizza("chicago");
+        newOrder.toppings = ['pepperoni', 'olives'];
+        newOrder.cheese = 'soy';
+      </code>
+      <p>Of course, in ES6, this would work:</p>
+      <code>
+        let newOrder = new Pizza("chicago");
+        newOrder = { ...newOrder, { toppings: ['pepperoni', 'olives'], cheese: 'soy'] } };
+      </code>
+      <p>Actually getting the pizza should be as simple as:</p>
+      <code>
+        newOrder.haveDelivered();
+      </code>
+      <p>It's that simple. Don't over complicate it. Just eat pizza.
+    </section>
+
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>

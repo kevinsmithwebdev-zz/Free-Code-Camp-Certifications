@@ -1,0 +1,55 @@
+$navWidth: 8em
+
+nav
+  width: $navWidth
+  height: 100%
+  position: fixed
+  left: 0
+  background-color: #eee
+  header h1
+    text-align: center
+  ul
+    padding: 0
+  li
+    list-style-type: none
+    background-color: #ddd
+    padding: 1em .5em
+    margin: .25em 0
+    font-size: 125%
+    font-weight: bold
+    border-radius: 2px
+  li a
+    text-decoration: none
+    color: blue
+  li:hover
+    background-color: #ccc
+    cursor: pointer
+main
+  margin-left: $navWidth
+  float: right
+
+.main-section
+  margin: .5em 0
+
+.main-section header
+  font-size: 150%
+  padding: .5em .5em
+  font-weight: bold
+
+.usage-li-title
+  font-weight: bold
+.usage-li-title::after
+  content: " - "
+
+@media (max-width: 850px)
+  nav
+    width: 100%
+    height: auto
+    position: relative
+    float: none
+    li
+      padding: .25em .5em
+      margin: .125em 0
+  main
+    margin-left: 0
+    float: none
